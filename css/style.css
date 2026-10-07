@@ -598,15 +598,12 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
 }
 
-/* Monogram Badge */
-.hero-monogram-badge {
-  position: relative;
+.hero-logo-badge {
   width: 78px;
   height: 78px;
+  object-fit: contain;
   margin-bottom: 1.25rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
 }
 
 .monogram-wreath-wrap {
