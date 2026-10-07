@@ -9,7 +9,7 @@
   --weg-accent-gold: #C5A059;
   --weg-accent-gold-hover: #B08C45;
   --weg-gold-light: #F4EAD6;
-  --weg-rose-burgundy: #7A2E39;
+  --weg-rose-burgundy: #41090E;
   --weg-rose-light: #F7EBEB;
   --weg-text-dark: #1C1917;
   --weg-text-muted: #665E57;
@@ -351,6 +351,13 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   gap: 0.75rem;
   text-decoration: none;
+}
+
+.brand-logo-img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  flex-shrink: 0;
 }
 
 .brand-rings-icon {
@@ -2175,7 +2182,7 @@ textarea.form-control {
 
 /* Pre-Footer Banner */
 .pre-footer-banner {
-  background: linear-gradient(135deg, var(--weg-rose-burgundy) 0%, #571F27 100%);
+  background: linear-gradient(135deg, var(--weg-rose-burgundy) 0%, #2A0408 100%);
   color: var(--weg-white);
   padding: 5rem 0;
   text-align: center;

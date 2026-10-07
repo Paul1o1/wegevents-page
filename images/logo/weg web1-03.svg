@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="86.89" height="27.28" viewBox="0 0 86.89 27.28">
+  <defs>
+    <style>
+      .cls-1 {
+        font-family: TrajanPro-Regular, 'Trajan Pro';
+        font-size: 12.26px;
+      }
+
+      .cls-1, .cls-2 {
+        fill: #b78e4a;
+      }
+
+      .cls-3 {
+        letter-spacing: 0em;
+      }
+
+      .cls-4 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-5 {
+        letter-spacing: 0em;
+      }
+
+      .cls-6 {
+        letter-spacing: 0em;
+      }
+
+      .cls-7 {
+        letter-spacing: 0em;
+      }
+
+      .cls-8 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-9 {
+        letter-spacing: .03em;
+      }
+
+      .cls-2 {
+        font-family: MyriadConceptRoman-Light, 'Myriad Variable Concept';
+        font-size: 7.94px;
+        font-variation-settings: 'wght' 300, 'wdth' 100;
+        font-weight: 300;
+      }
+    </style>
+  </defs>
+  <text class="cls-1" transform="translate(3.3 12.86)"><tspan x="0" y="0">weg </tspan><tspan class="cls-9" x="31.92" y="0">E</tspan><tspan x="39.75" y="0">ven</tspan><tspan class="cls-8" x="64.73" y="0">t</tspan><tspan class="cls-5" x="72.07" y="0">s</tspan></text>
+  <text class="cls-2" transform="translate(4.99 21.23)"><tspan x="0" y="0"> </tspan><tspan class="cls-7" x="1.74" y="0">P</tspan><tspan x="5.66" y="0">laning &amp; </tspan><tspan class="cls-3" x="33.37" y="0">C</tspan><tspan x="37.85" y="0">oo</tspan><tspan class="cls-4" x="46.3" y="0">r</tspan><tspan x="48.56" y="0">din</tspan><tspan class="cls-6" x="58.8" y="0">a</tspan><tspan x="62.39" y="0">tion</tspan></text>
+</svg>
