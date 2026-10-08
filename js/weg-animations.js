@@ -29,33 +29,7 @@
         updateProgress();
     }
 
-    // 2. Create Floating Back To Top Button
-    function initBackToTopButton() {
-        if (document.getElementById('weg-back-to-top')) return;
-        const btn = document.createElement('button');
-        btn.id = 'weg-back-to-top';
-        btn.className = 'weg-back-to-top-btn';
-        btn.setAttribute('aria-label', 'Scroll to top');
-        btn.innerHTML = `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>`;
-        document.body.appendChild(btn);
-
-        function toggleBtn() {
-            if (window.pageYOffset > 400) {
-                btn.classList.add('visible');
-            } else {
-                btn.classList.remove('visible');
-            }
-        }
-
-        btn.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-
-        window.addEventListener('scroll', toggleBtn, { passive: true });
-        toggleBtn();
-    }
-
-    // 3. Elements excluded from scroll reveals
+    // 2. Elements excluded from scroll reveals
     function isExcluded(el) {
         if (!el) return true;
         const name = el.getAttribute('data-framer-name');
@@ -66,8 +40,7 @@
             name === 'BG Image' ||
             name === 'BG Video' ||
             el.classList.contains('framer-navigation-overlay') ||
-            el.id === 'weg-scroll-progress' ||
-            el.id === 'weg-back-to-top'
+            el.id === 'weg-scroll-progress'
         ) {
             return true;
         }
@@ -220,7 +193,6 @@
 
     function start() {
         initScrollProgressBar();
-        initBackToTopButton();
         setupAnimationTargets();
         initIntersectionObserver();
         setupHoverInteractions();

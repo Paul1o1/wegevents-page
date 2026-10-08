@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // 6. Back To Top Button
-  const backToTopBtn = document.querySelector('.back-to-top-btn, #weg-back-to-top');
+  const backToTopBtn = document.querySelector('.back-to-top-btn');
   if (backToTopBtn) {
     const toggleVisibility = () => {
       if (window.scrollY > 300) {
