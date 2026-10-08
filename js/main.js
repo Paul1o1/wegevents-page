@@ -105,6 +105,16 @@ document.addEventListener('DOMContentLoaded', () => {
   // 6. Back To Top Button
   const backToTopBtn = document.querySelector('.back-to-top-btn, #weg-back-to-top');
   if (backToTopBtn) {
+    const toggleVisibility = () => {
+      if (window.scrollY > 300) {
+        backToTopBtn.classList.add('visible');
+      } else {
+        backToTopBtn.classList.remove('visible');
+      }
+    };
+    toggleVisibility();
+    window.addEventListener('scroll', toggleVisibility, { passive: true });
+
     backToTopBtn.addEventListener('click', () => {
       window.scrollTo({
         top: 0,
