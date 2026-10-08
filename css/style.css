@@ -1005,20 +1005,28 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Story 4-Photo Strip */
 .ethos-gallery-strip {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 8px;
   max-width: 440px;
   margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.ethos-gallery-track {
+  display: flex;
+  gap: 8px;
+  width: max-content;
+  animation: ethos-gallery-scroll 22s linear infinite;
 }
 
 .ethos-gallery-item {
   position: relative;
+  width: 104px;
   aspect-ratio: 4 / 3;
   border-radius: 2px;
   overflow: hidden;
   background-color: #E8E2D9;
   box-shadow: 0 2px 8px rgba(28, 25, 23, 0.06);
+  flex-shrink: 0;
 }
 
 .ethos-gallery-img {
@@ -1030,6 +1038,15 @@ h1, h2, h3, h4, h5, h6 {
 
 .ethos-gallery-item:hover .ethos-gallery-img {
   transform: scale(1.08);
+}
+
+.ethos-gallery-strip:hover .ethos-gallery-track {
+  animation-play-state: paused;
+}
+
+@keyframes ethos-gallery-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
 
 .ethos-badge-see-story {
