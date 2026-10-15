@@ -1,0 +1,340 @@
+# ============================================================
+# WEG Events — Pages CMS Configuration
+# Place this file at the root of your GitHub repository.
+# Documentation: https://pagescms.org/docs/
+# ============================================================
+
+# Where uploaded media files will be stored
+media: images
+
+# ============================================================
+# CONTENT DEFINITIONS
+# Each entry maps to a page file your client can edit.
+# ============================================================
+content:
+
+  # ----------------------------------------------------------
+  # 1. HOME PAGE  (index.html)
+  # ----------------------------------------------------------
+  - name: home
+    label: "🏠 Home Page"
+    path: index.html
+    type: file
+    fields:
+
+      # ── SEO ────────────────────────────────────────────────
+      - name: seo_title
+        label: "SEO — Browser Tab Title"
+        type: string
+
+      - name: seo_description
+        label: "SEO — Meta Description (shown in Google results)"
+        type: text
+
+      # ── HERO ───────────────────────────────────────────────
+      - name: hero_tagline
+        label: "Hero — Tagline Under Logo"
+        type: string
+
+      - name: hero_left_label
+        label: "Hero — Left Side Label (e.g. Based In Addis Ababa)"
+        type: string
+
+      - name: hero_right_label
+        label: "Hero — Right Side Label (e.g. Available In Ethiopia)"
+        type: string
+
+      - name: hero_video_src
+        label: "Hero — Background Video File"
+        type: image
+
+      - name: hero_video_poster
+        label: "Hero — Video Fallback / Poster Image"
+        type: image
+
+      # ── ETHOS / OUR STORY ──────────────────────────────────
+      - name: ethos_badge_text
+        label: "Our Story — Badge Text (e.g. Our Story)"
+        type: string
+
+      - name: ethos_headline
+        label: "Our Story — Main Headline"
+        type: string
+
+      - name: ethos_philosophy_title
+        label: "Our Story — Left Column Title (e.g. The WEG Philosophy)"
+        type: string
+
+      - name: ethos_philosophy_body
+        label: "Our Story — Left Column Description"
+        type: text
+
+      - name: ethos_journey_title
+        label: "Our Story — Right Column Title (e.g. Our Journey)"
+        type: string
+
+      - name: ethos_journey_body
+        label: "Our Story — Right Column Description"
+        type: text
+
+      - name: ethos_stat1_number
+        label: "Our Story — Stat 1 Number (e.g. 50+)"
+        type: string
+
+      - name: ethos_stat1_label
+        label: "Our Story — Stat 1 Label (e.g. Events)"
+        type: string
+
+      - name: ethos_stat1_text
+        label: "Our Story — Stat 1 Description"
+        type: text
+
+      - name: ethos_stat2_number
+        label: "Our Story — Stat 2 Number (e.g. 3)"
+        type: string
+
+      - name: ethos_stat2_label
+        label: "Our Story — Stat 2 Label (e.g. Founders)"
+        type: string
+
+      - name: ethos_stat2_text
+        label: "Our Story — Stat 2 Description"
+        type: text
+
+      - name: ethos_stat3_number
+        label: "Our Story — Stat 3 Number (e.g. 100%)"
+        type: string
+
+      - name: ethos_stat3_label
+        label: "Our Story — Stat 3 Label (e.g. Dedicated)"
+        type: string
+
+      - name: ethos_stat3_text
+        label: "Our Story — Stat 3 Description"
+        type: text
+
+      # ── SERVICES SHOWCASE ──────────────────────────────────
+      - name: services_eyebrow
+        label: "Services — Small Eyebrow Text (e.g. Bespoke Event Solutions)"
+        type: string
+
+      - name: services_headline
+        label: "Services — Section Headline (e.g. Our Services)"
+        type: string
+
+      - name: services_description
+        label: "Services — Short Description Below Headline"
+        type: text
+
+      - name: services_bg_image
+        label: "Services — Background Photo"
+        type: image
+
+      # ── GALLERY PREVIEW CARDS ──────────────────────────────
+      - name: gallery_section_eyebrow
+        label: "Gallery Preview — Eyebrow Text (e.g. Captured Moments)"
+        type: string
+
+      - name: gallery_section_headline
+        label: "Gallery Preview — Main Headline"
+        type: string
+
+      - name: gallery_section_intro
+        label: "Gallery Preview — Introductory Paragraph"
+        type: text
+
+      - name: gallery_card1_image
+        label: "Gallery Card 1 — Photo"
+        type: image
+
+      - name: gallery_card1_category
+        label: "Gallery Card 1 — Category Tag (e.g. Destination Wedding)"
+        type: string
+
+      - name: gallery_card1_title
+        label: "Gallery Card 1 — Couple/Event Name"
+        type: string
+
+      - name: gallery_card1_description
+        label: "Gallery Card 1 — Short Description"
+        type: text
+
+      - name: gallery_card2_image
+        label: "Gallery Card 2 — Photo"
+        type: image
+
+      - name: gallery_card2_category
+        label: "Gallery Card 2 — Category Tag"
+        type: string
+
+      - name: gallery_card2_title
+        label: "Gallery Card 2 — Couple/Event Name"
+        type: string
+
+      - name: gallery_card2_description
+        label: "Gallery Card 2 — Short Description"
+        type: text
+
+      - name: gallery_card3_image
+        label: "Gallery Card 3 — Photo"
+        type: image
+
+      - name: gallery_card3_category
+        label: "Gallery Card 3 — Category Tag"
+        type: string
+
+      - name: gallery_card3_title
+        label: "Gallery Card 3 — Couple/Event Name"
+        type: string
+
+      - name: gallery_card3_description
+        label: "Gallery Card 3 — Short Description"
+        type: text
+
+      - name: gallery_card4_image
+        label: "Gallery Card 4 — Photo"
+        type: image
+
+      - name: gallery_card4_category
+        label: "Gallery Card 4 — Category Tag"
+        type: string
+
+      - name: gallery_card4_title
+        label: "Gallery Card 4 — Couple/Event Name"
+        type: string
+
+      - name: gallery_card4_description
+        label: "Gallery Card 4 — Short Description"
+        type: text
+
+      # ── TESTIMONIALS ───────────────────────────────────────
+      - name: testimonial1_image
+        label: "Testimonial 1 — Background Photo"
+        type: image
+
+      - name: testimonial1_quote
+        label: "Testimonial 1 — Quote Text"
+        type: text
+
+      - name: testimonial1_author
+        label: "Testimonial 1 — Client Name (e.g. — Sofia & Luca)"
+        type: string
+
+      - name: testimonial2_image
+        label: "Testimonial 2 — Background Photo"
+        type: image
+
+      - name: testimonial2_quote
+        label: "Testimonial 2 — Quote Text"
+        type: text
+
+      - name: testimonial2_author
+        label: "Testimonial 2 — Client Name"
+        type: string
+
+      - name: testimonial3_image
+        label: "Testimonial 3 — Background Photo"
+        type: image
+
+      - name: testimonial3_quote
+        label: "Testimonial 3 — Quote Text"
+        type: text
+
+      - name: testimonial3_author
+        label: "Testimonial 3 — Client Name"
+        type: string
+
+      # ── FAQ ────────────────────────────────────────────────
+      - name: faq_section_headline
+        label: "FAQ — Section Headline"
+        type: string
+
+      - name: faq_section_intro
+        label: "FAQ — Introductory Paragraph"
+        type: text
+
+      - name: faq1_question
+        label: "FAQ 1 — Question"
+        type: string
+
+      - name: faq1_answer
+        label: "FAQ 1 — Answer"
+        type: text
+
+      - name: faq2_question
+        label: "FAQ 2 — Question"
+        type: string
+
+      - name: faq2_answer
+        label: "FAQ 2 — Answer"
+        type: text
+
+      - name: faq3_question
+        label: "FAQ 3 — Question"
+        type: string
+
+      - name: faq3_answer
+        label: "FAQ 3 — Answer"
+        type: text
+
+      - name: faq4_question
+        label: "FAQ 4 — Question"
+        type: string
+
+      - name: faq4_answer
+        label: "FAQ 4 — Answer"
+        type: text
+
+      - name: faq5_question
+        label: "FAQ 5 — Question"
+        type: string
+
+      - name: faq5_answer
+        label: "FAQ 5 — Answer"
+        type: text
+
+      # ── PRE-FOOTER CTA ─────────────────────────────────────
+      - name: cta_headline
+        label: "Call-to-Action Banner — Headline"
+        type: string
+
+      - name: cta_subtext
+        label: "Call-to-Action Banner — Supporting Text"
+        type: text
+
+      # ── FOOTER ─────────────────────────────────────────────
+      - name: footer_brand_tagline
+        label: "Footer — Brand Description Paragraph"
+        type: text
+
+      - name: footer_email
+        label: "Footer — Contact Email Address"
+        type: string
+
+      - name: footer_phone
+        label: "Footer — Contact Phone Number"
+        type: string
+
+      - name: footer_location
+        label: "Footer — Location Text"
+        type: string
+
+      - name: footer_instagram_url
+        label: "Footer — Instagram Profile URL"
+        type: string
+
+      - name: footer_tiktok_url
+        label: "Footer — TikTok Profile URL"
+        type: string
+
+      - name: footer_linkedin_url
+        label: "Footer — LinkedIn Profile URL"
+        type: string
+
+      - name: footer_telegram_url
+        label: "Footer — Telegram Link (e.g. https://t.me/wegevents)"
+        type: string
+
+      - name: footer_copyright
+        label: "Footer — Copyright Line (e.g. © 2025 Weg Events. All rights reserved.)"
+        type: string
