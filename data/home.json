@@ -44,15 +44,6 @@
   "gallery_card4_category": "Bespoke Mels Celebration",
   "gallery_card4_title": "True Moments",
   "gallery_card4_description": "Honoring cultural roots with vibrant traditional decor, ceremonial attire, and flawlessly choreographed guest flow.",
-  "testimonial1_image": "/images/hosts.jpg",
-  "testimonial1_quote": "WEG Events transformed our dream wedding into pure magic. Every detail was executed with grace, leaving us and our families completely worry-free.",
-  "testimonial1_author": "\u2014 Sofia & Luca",
-  "testimonial2_image": "/images/table-decor.jpg",
-  "testimonial2_quote": "From our first consultation to the final dance, Bethel and the team delivered beyond anything we could have imagined. Truly world-class service.",
-  "testimonial2_author": "\u2014 Mei & Thomas",
-  "testimonial3_image": "/images/ceremony.jpg",
-  "testimonial3_quote": "Our Mels celebration was vibrant, joyful, and utterly stress-free. WEG honored our heritage with such elegance and warmth.",
-  "testimonial3_author": "\u2014 Clara & James",
   "faq_section_headline": "Frequently Asked Questions",
   "faq_section_intro": "Everything you need to know about partnering with WEG Events to craft your bespoke celebration.",
   "cta_headline": "Your Celebration Begins Here",
@@ -86,6 +77,23 @@
     {
       "question": "How far in advance should I book your services?",
       "answer": "We recommend booking at least 6 to 12 months in advance, especially for peak wedding seasons, to ensure availability and thorough planning."
+    }
+  ],
+  "testimonials": [
+    {
+      "image": "/images/hosts.jpg",
+      "quote": "WEG Events transformed our dream wedding into pure magic. Every detail was executed with grace, leaving us and our families completely worry-free.",
+      "author": "\u2014 Sofia & Luca"
+    },
+    {
+      "image": "/images/table-decor.jpg",
+      "quote": "From our first consultation to the final dance, Bethel and the team delivered beyond anything we could have imagined. Truly world-class service.",
+      "author": "\u2014 Mei & Thomas"
+    },
+    {
+      "image": "/images/ceremony.jpg",
+      "quote": "Our Mels celebration was vibrant, joyful, and utterly stress-free. WEG honored our heritage with such elegance and warmth.",
+      "author": "\u2014 Clara & James"
     }
   ]
 }

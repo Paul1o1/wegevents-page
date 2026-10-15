@@ -209,41 +209,23 @@ content:
         type: text
 
       # ── TESTIMONIALS ───────────────────────────────────────
-      - name: testimonial1_image
-        label: "Testimonial 1 — Background Photo"
-        type: image
-
-      - name: testimonial1_quote
-        label: "Testimonial 1 — Quote Text"
-        type: text
-
-      - name: testimonial1_author
-        label: "Testimonial 1 — Client Name (e.g. — Sofia & Luca)"
-        type: string
-
-      - name: testimonial2_image
-        label: "Testimonial 2 — Background Photo"
-        type: image
-
-      - name: testimonial2_quote
-        label: "Testimonial 2 — Quote Text"
-        type: text
-
-      - name: testimonial2_author
-        label: "Testimonial 2 — Client Name"
-        type: string
-
-      - name: testimonial3_image
-        label: "Testimonial 3 — Background Photo"
-        type: image
-
-      - name: testimonial3_quote
-        label: "Testimonial 3 — Quote Text"
-        type: text
-
-      - name: testimonial3_author
-        label: "Testimonial 3 — Client Name"
-        type: string
+      - name: testimonials
+        label: "Client Testimonials & Reviews"
+        type: object
+        list:
+          collapsible: true
+          collapsed: true
+          summary: "{author}"
+        fields:
+          - name: author
+            label: "Couple / Client Name (e.g. — Sofia & Luca)"
+            type: string
+          - name: quote
+            label: "Review / Quote Text"
+            type: text
+          - name: image
+            label: "Background Photo"
+            type: image
 
       # ── FAQ ────────────────────────────────────────────────
       - name: faq_section_headline
@@ -372,29 +354,23 @@ content:
         label: "Team Section — Headline"
         type: string
 
-      - name: about_team1_image
-        label: "Team Member 1 — Photo"
-        type: image
-      - name: about_team1_name
-        label: "Team Member 1 — Name"
-        type: string
-      - name: about_team1_role
-        label: "Team Member 1 — Role"
-        type: string
-
-      - name: about_team2_image
-        label: "Team Member 2 — Photo"
-        type: image
-      - name: about_team2_name
-        label: "Team Member 2 — Name"
-        type: string
-
-      - name: about_team3_image
-        label: "Team Member 3 — Photo"
-        type: image
-      - name: about_team3_name
-        label: "Team Member 3 — Name"
-        type: string
+      - name: team_members
+        label: "Team Members & Planners"
+        type: object
+        list:
+          collapsible: true
+          collapsed: true
+          summary: "{name} ({role})"
+        fields:
+          - name: name
+            label: "Member Name"
+            type: string
+          - name: role
+            label: "Role / Title (e.g. Co-Founder & Lead Planner)"
+            type: string
+          - name: image
+            label: "Headshot Photo"
+            type: image
 
   # ----------------------------------------------------------
   # 3. SERVICES PAGE  (service.html)

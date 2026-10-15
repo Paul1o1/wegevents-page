@@ -53,6 +53,41 @@ def build_gallery_cards(cards):
         </article>''')
     return "\n\n".join(html_cards)
 
+def build_testimonials(items):
+    slides = []
+    for idx, item in enumerate(items):
+        active_cls = " active" if idx == 0 else ""
+        img = item.get("image", "/images/hosts.jpg")
+        quote = item.get("quote", "")
+        author = item.get("author", "")
+        slides.append(f'''      <!-- Testimonial {idx + 1} -->
+      <div class="testimonial-hero-slide{active_cls}">
+        <img src="{img}" alt="Testimonial background" class="testimonial-hero-bg">
+        <div class="testimonial-hero-overlay"></div>
+        <div class="testimonial-hero-content">
+          <img src="/images/lR0dc3W8oIg4D9UWD3fIwe639h0.svg" alt="Quote" class="testimonial-hero-quote-icon" aria-hidden="true">
+          <p class="testimonial-hero-quote">"{quote}"</p>
+          <span class="testimonial-hero-author">{author}</span>
+        </div>
+      </div>''')
+    return "\n".join(slides)
+
+def build_team(members):
+    cards = []
+    for idx, m in enumerate(members, 1):
+        name = m.get("name", "")
+        role = m.get("role", "")
+        img = m.get("image", "/images/hosts.jpg")
+        cards.append(f'''        <!-- Team Member {idx} -->
+        <div class="team-card" data-framer-name="Card">
+          <img src="{img}" alt="{name}" class="team-img">
+          <div class="team-info">
+            <h3 class="team-name">{name}</h3>
+            <p class="team-role">{role}</p>
+          </div>
+        </div>''')
+    return "\n".join(cards)
+
 mappings = [
     ('templates/index.html', 'data/home.json', 'index.html'),
     ('templates/about.html', 'data/about.json', 'about.html'),
@@ -75,6 +110,10 @@ for tmpl_path, json_path, out_path in mappings:
         html = html.replace('{{ faq_items }}', build_faqs(data['faqs']))
     if 'gallery_cards' in data and '{{ gallery_cards_html }}' in html:
         html = html.replace('{{ gallery_cards_html }}', build_gallery_cards(data['gallery_cards']))
+    if 'testimonials' in data and '{{ testimonial_slides }}' in html:
+        html = html.replace('{{ testimonial_slides }}', build_testimonials(data['testimonials']))
+    if 'team_members' in data and '{{ team_cards }}' in html:
+        html = html.replace('{{ team_cards }}', build_team(data['team_members']))
 
     # Scalar tag replacements
     for key, val in data.items():
@@ -86,4 +125,4 @@ for tmpl_path, json_path, out_path in mappings:
         f.write(html)
     print(f"Compiled {out_path}")
 
-print("Build complete!")
+print("All pages compiled successfully!")

@@ -13,11 +13,21 @@
   "about_vision_eyebrow": "Our Vision",
   "about_vision_title": "Setting a New Standard",
   "about_team_headline": "Meet the Team",
-  "about_team1_image": "/images/hosts.jpg",
-  "about_team1_name": "Bethel Berhanu",
-  "about_team1_role": "Co-Founder & Lead Planner",
-  "about_team2_image": "/images/ceremony.jpg",
-  "about_team2_name": "Haleluya Temesgen",
-  "about_team3_image": "/images/table-decor.jpg",
-  "about_team3_name": "Rakeb Yehwalashet"
+  "team_members": [
+    {
+      "name": "Bethel Berhanu",
+      "role": "Co-Founder & Lead Planner",
+      "image": "/images/hosts.jpg"
+    },
+    {
+      "name": "Haleluya Temesgen",
+      "role": "Co-Founder & Lead Planner",
+      "image": "/images/ceremony.jpg"
+    },
+    {
+      "name": "Rakeb Yehwalashet",
+      "role": "Co-Founder & Lead Planner",
+      "image": "/images/table-decor.jpg"
+    }
+  ]
 }
