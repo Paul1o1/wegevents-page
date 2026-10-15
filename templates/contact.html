@@ -110,7 +110,10 @@
         <div class="contact-form-panel">
           <h3 class="heading-md" style="margin-bottom: 1.5rem;">Send Us an Inquiry</h3>
           
-          <form id="weg-contact-form">
+          <form id="weg-contact-form" action="/api/contact.php" method="POST">
+            <!-- Anti-spam honeypot -->
+            <input type="text" name="_gotcha" style="display:none !important;" tabindex="-1" autocomplete="off">
+            <div id="contact-form-feedback" style="display:none; margin-bottom: 1.5rem; padding: 1rem 1.25rem; border-radius: 6px; font-size: 0.95rem; line-height: 1.6;"></div>
             <div class="form-row-2">
               <div class="form-group">
                 <label for="name">Your Name *</label>

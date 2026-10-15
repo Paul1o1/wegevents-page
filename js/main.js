@@ -307,6 +307,80 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }, { passive: true });
   }
+
+  // 12. Luxury Contact Form Handler (cPanel PHP Backend)
+  const contactForm = document.getElementById('weg-contact-form');
+  if (contactForm) {
+    const feedbackBox = document.getElementById('contact-form-feedback');
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
+    const originalBtnText = submitBtn ? submitBtn.innerHTML : 'Send Inquiry';
+
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = 'Sending Inquiry...';
+      }
+
+      if (feedbackBox) {
+        feedbackBox.style.display = 'none';
+        feedbackBox.className = '';
+      }
+
+      const formData = new FormData(contactForm);
+
+      try {
+        const response = await fetch('/api/contact.php', {
+          method: 'POST',
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
+
+        const data = await response.json();
+
+        if (response.ok && data.status === 'success') {
+          if (feedbackBox) {
+            feedbackBox.style.display = 'block';
+            feedbackBox.style.backgroundColor = 'rgba(91, 30, 40, 0.05)';
+            feedbackBox.style.border = '1.5px solid #c49d48';
+            feedbackBox.style.color = '#1f1f1f';
+            feedbackBox.innerHTML = `
+              <div style="display: flex; align-items: flex-start; gap: 0.75rem;">
+                <span style="font-size: 1.4rem;">💍</span>
+                <div>
+                  <h4 style="margin: 0 0 0.25rem 0; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.25rem; color: #5b1e28;">Inquiry Received With Care</h4>
+                  <p style="margin: 0; font-size: 0.95rem; line-height: 1.6;">${data.message || 'Thank you! We will review your celebration details and be in touch within 24 hours.'}</p>
+                </div>
+              </div>
+            `;
+            feedbackBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          }
+          contactForm.reset();
+        } else {
+          throw new Error(data.message || 'Unable to send message right now.');
+        }
+      } catch (err) {
+        if (feedbackBox) {
+          feedbackBox.style.display = 'block';
+          feedbackBox.style.backgroundColor = '#fff5f5';
+          feedbackBox.style.border = '1px solid #feb2b2';
+          feedbackBox.style.color = '#9b2c2c';
+          feedbackBox.innerHTML = `
+            <strong>Submission issue:</strong> ${err.message || 'Please try again or email us directly at <a href="mailto:info@wegevents.com" style="text-decoration: underline; color: inherit;">info@wegevents.com</a>.'}
+          `;
+          feedbackBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+      } finally {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalBtnText;
+        }
+      }
+    });
+  }
 });
 
 
