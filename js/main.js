@@ -123,28 +123,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 7. Contact Form Submission Handling
-  const contactForms = document.querySelectorAll('#weg-contact-form, form');
-  contactForms.forEach(form => {
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const submitBtn = form.querySelector('button[type="submit"], input[type="submit"]');
-      if (submitBtn) {
-        const originalText = submitBtn.textContent || submitBtn.value;
-        submitBtn.disabled = true;
-        if (submitBtn.tagName === 'INPUT') submitBtn.value = 'Sending...';
-        else submitBtn.textContent = 'Sending Message...';
-
-        setTimeout(() => {
-          alert('Thank you! Your message has been sent to WEG Events. We will get back to you shortly.');
-          form.reset();
-          submitBtn.disabled = false;
-          if (submitBtn.tagName === 'INPUT') submitBtn.value = originalText;
-          else submitBtn.textContent = originalText;
-        }, 1000);
-      }
-    });
-  });
 
   // 8. Gallery Lightbox Modal
   const lightbox = document.getElementById('weg-lightbox');
@@ -359,21 +337,33 @@ document.addEventListener('DOMContentLoaded', () => {
         const data = await response.json();
 
         if (response.ok && (data.success === 'true' || data.success === true)) {
-          if (feedbackBox) {
-            feedbackBox.style.display = 'block';
-            feedbackBox.style.backgroundColor = 'rgba(91, 30, 40, 0.05)';
-            feedbackBox.style.border = '1.5px solid #c49d48';
-            feedbackBox.style.color = '#1f1f1f';
-            feedbackBox.innerHTML = `
-              <div style="display: flex; align-items: flex-start; gap: 0.75rem;">
-                <span style="font-size: 1.4rem;">💍</span>
-                <div>
-                  <h4 style="margin: 0 0 0.25rem 0; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.25rem; color: #5b1e28;">Inquiry Received With Care</h4>
-                  <p style="margin: 0; font-size: 0.95rem; line-height: 1.6;">Thank you, ${formPayload.name || 'there'}! We have safely received your celebration details. Our planning team will review them and contact you within 24 hours.</p>
-                </div>
-              </div>
-            `;
-            feedbackBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          const formInner = document.getElementById('contact-form-inner');
+          const successState = document.getElementById('contact-success-state');
+          if (formInner && successState) {
+            formInner.style.display = 'none';
+            const nameEl = document.getElementById('success-client-name');
+            const serviceEl = document.getElementById('success-service-name');
+            const emailEl = document.getElementById('success-client-email');
+            const phoneEl = document.getElementById('success-client-phone');
+            if (nameEl) nameEl.textContent = formPayload.name;
+            if (serviceEl) serviceEl.textContent = formPayload.service;
+            if (emailEl) emailEl.textContent = formPayload.email;
+            if (phoneEl) phoneEl.textContent = formPayload.phone;
+            successState.style.display = 'block';
+
+            const formPanel = document.getElementById('contact-form-panel');
+            if (formPanel) {
+              formPanel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+
+            const sendAnotherBtn = document.getElementById('btn-send-another');
+            if (sendAnotherBtn) {
+              sendAnotherBtn.onclick = () => {
+                contactForm.reset();
+                successState.style.display = 'none';
+                formInner.style.display = 'block';
+              };
+            }
           }
           contactForm.reset();
         } else {

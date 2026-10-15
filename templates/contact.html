@@ -107,66 +107,89 @@
         </div>
 
         <!-- Right Form Panel -->
-        <div class="contact-form-panel">
-          <h3 class="heading-md" style="margin-bottom: 1.5rem;">Send Us an Inquiry</h3>
-          
-          <form id="weg-contact-form" action="/api/contact.php" method="POST">
-            <!-- Anti-spam honeypot -->
-            <input type="text" name="_gotcha" style="display:none !important;" tabindex="-1" autocomplete="off">
-            <div id="contact-form-feedback" style="display:none; margin-bottom: 1.5rem; padding: 1rem 1.25rem; border-radius: 6px; font-size: 0.95rem; line-height: 1.6;"></div>
-            <div class="form-row-2">
-              <div class="form-group">
-                <label for="name">Your Name *</label>
-                <input type="text" id="name" name="name" class="form-control" placeholder="e.g. Bethlehem & Nahom" required>
+        <div class="contact-form-panel" id="contact-form-panel">
+          <div id="contact-form-inner">
+            <h3 class="heading-md" style="margin-bottom: 1.5rem;">Send Us an Inquiry</h3>
+            
+            <form id="weg-contact-form" action="/api/contact.php" method="POST">
+              <!-- Anti-spam honeypot -->
+              <input type="text" name="_gotcha" style="display:none !important;" tabindex="-1" autocomplete="off">
+              <div id="contact-form-feedback" style="display:none; margin-bottom: 1.5rem; padding: 1rem 1.25rem; border-radius: 6px; font-size: 0.95rem; line-height: 1.6;"></div>
+              <div class="form-row-2">
+                <div class="form-group">
+                  <label for="name">Your Name *</label>
+                  <input type="text" id="name" name="name" class="form-control" placeholder="e.g. Bethlehem & Nahom" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="phone">Phone Number *</label>
+                  <input type="tel" id="phone" name="phone" class="form-control" placeholder="+251 9XX XXX XXX" required>
+                </div>
+              </div>
+
+              <div class="form-row-2">
+                <div class="form-group">
+                  <label for="email">Email Address *</label>
+                  <input type="email" id="email" name="email" class="form-control" placeholder="you@example.com" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="event_date">Event Date</label>
+                  <input type="date" id="event_date" name="event_date" class="form-control">
+                </div>
+              </div>
+
+              <div class="form-row-2">
+                <div class="form-group">
+                  <label for="guest_count">Approximate Guest Count</label>
+                  <input type="number" id="guest_count" name="guest_count" class="form-control" placeholder="e.g. 250">
+                </div>
+
+                <div class="form-group">
+                  <label for="service">Service Interested In *</label>
+                  <select id="service" name="service" class="form-control" required style="cursor: pointer;">
+                    <option value="" disabled selected>Select a Service</option>
+                    <option value="Wedding-Day Coordination">Wedding-Day Coordination</option>
+                    <option value="Full Wedding Management">Full Wedding Management</option>
+                    <option value="Mels Day Planning">Mels Day Planning</option>
+                    <option value="Corporate Events">Corporate Events</option>
+                    <option value="Destination Wedding">Destination Wedding</option>
+                    <option value="Other Celebration">Other Celebration</option>
+                  </select>
+                </div>
               </div>
 
               <div class="form-group">
-                <label for="phone">Phone Number *</label>
-                <input type="tel" id="phone" name="phone" class="form-control" placeholder="+251 9XX XXX XXX" required>
+                <label for="message">Tell Us About Your Event Vision *</label>
+                <textarea id="message" name="message" class="form-control" placeholder="Share any specific details, venues in mind, or questions..." rows="4" required></textarea>
               </div>
+
+              <button type="submit" class="btn btn-gold" style="width: 100%; padding: 1.1rem; font-size: 0.95rem;">
+                Send Inquiry
+              </button>
+            </form>
+          </div>
+
+          <!-- Luxury In-Place Success Card -->
+          <div id="contact-success-state" style="display: none; padding: 2.5rem 1.5rem; text-align: center; animation: fadeIn 0.4s ease-out;">
+            <div style="width: 64px; height: 64px; margin: 0 auto 1.5rem auto; border-radius: 50%; background: rgba(91, 30, 40, 0.08); display: flex; align-items: center; justify-content: center; border: 1.5px solid #c49d48;">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#5b1e28" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 6L9 17l-5-5"/>
+              </svg>
             </div>
-
-            <div class="form-row-2">
-              <div class="form-group">
-                <label for="email">Email Address *</label>
-                <input type="email" id="email" name="email" class="form-control" placeholder="you@example.com" required>
-              </div>
-
-              <div class="form-group">
-                <label for="event_date">Event Date</label>
-                <input type="date" id="event_date" name="event_date" class="form-control">
-              </div>
+            <p class="sub-heading" style="color: #c49d48; margin-bottom: 0.5rem; letter-spacing: 2px;">INQUIRY RECEIVED</p>
+            <h3 style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 2.2rem; color: #5b1e28; margin-bottom: 1rem; line-height: 1.2;">Your Celebration Begins Here</h3>
+            <p style="font-size: 1.05rem; line-height: 1.8; color: #555; max-width: 440px; margin: 0 auto 1.75rem auto;">
+              Thank you, <strong id="success-client-name" style="color: #1f1f1f;"></strong>! We have received your inquiry for <em id="success-service-name" style="color: #5b1e28;"></em>. Our lead planners will review your date and details, and reach out to you within 24 hours.
+            </p>
+            <div style="background: rgba(255,255,255,0.7); border: 1px solid #e8e2d8; border-radius: 8px; padding: 1rem 1.25rem; max-width: 400px; margin: 0 auto 2rem auto; font-size: 0.95rem; color: #555; text-align: left; line-height: 1.6;">
+              <div>Confirmation sent to: <strong id="success-client-email" style="color: #222;"></strong></div>
+              <div>Phone: <strong id="success-client-phone" style="color: #222;"></strong></div>
             </div>
-
-            <div class="form-row-2">
-              <div class="form-group">
-                <label for="guest_count">Approximate Guest Count</label>
-                <input type="number" id="guest_count" name="guest_count" class="form-control" placeholder="e.g. 250">
-              </div>
-
-              <div class="form-group">
-                <label for="service">Service Interested In *</label>
-                <select id="service" name="service" class="form-control" required style="cursor: pointer;">
-                  <option value="" disabled selected>Select a Service</option>
-                  <option value="Wedding-Day Coordination">Wedding-Day Coordination</option>
-                  <option value="Full Wedding Management">Full Wedding Management</option>
-                  <option value="Mels Day Planning">Mels Day Planning</option>
-                  <option value="Corporate Events">Corporate Events</option>
-                  <option value="Destination Wedding">Destination Wedding</option>
-                  <option value="Other Celebration">Other Celebration</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="message">Tell Us About Your Event Vision *</label>
-              <textarea id="message" name="message" class="form-control" placeholder="Share any specific details, venues in mind, or questions..." rows="4" required></textarea>
-            </div>
-
-            <button type="submit" class="btn btn-gold" style="width: 100%; padding: 1.1rem; font-size: 0.95rem;">
-              Send Inquiry
+            <button type="button" id="btn-send-another" class="btn btn-gold" style="padding: 0.85rem 2rem; font-size: 0.9rem;">
+              Send Another Inquiry
             </button>
-          </form>
+          </div>
         </div>
 
       </div>
