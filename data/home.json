@@ -1,11 +1,11 @@
 {
   "seo_title": "WEG Events - Luxury Wedding & Event Planning",
   "seo_description": "WEG Events is a bespoke luxury event and wedding planning company dedicated to crafting unforgettable, seamless, and elegant celebrations.",
-  "hero_video_poster": "/images/hosts.jpg",
-  "hero_video_src": "/videos/0527(2).mp4",
+  "hero_tagline": "espoke Luxury Event Planning & Wedding Management",
   "hero_left_label": "BASED IN ADDIS ABABA",
   "hero_right_label": "AVAILABLE IN ETHIOPIA",
-  "hero_tagline": "Bespoke Luxury Event Planning & Wedding Management",
+  "hero_video_src": "/videos/0527(2).mp4",
+  "hero_video_poster": "/images/hosts.jpg",
   "ethos_badge_text": "Our Story",
   "ethos_headline": "Crafted With Care, Designed For You",
   "ethos_philosophy_title": "The WEG Philosophy",
@@ -44,19 +44,25 @@
   "gallery_card4_category": "Bespoke Mels Celebration",
   "gallery_card4_title": "True Moments",
   "gallery_card4_description": "Honoring cultural roots with vibrant traditional decor, ceremonial attire, and flawlessly choreographed guest flow.",
+  "testimonials": [
+    {
+      "author": "— Sofia & Luca",
+      "quote": "WEG Events transformed our dream wedding into pure magic. Every detail was executed with grace, leaving us and our families completely worry-free.",
+      "image": "/images/hosts.jpg"
+    },
+    {
+      "author": "— Mei & Thomas",
+      "quote": "From our first consultation to the final dance, Bethel and the team delivered beyond anything we could have imagined. Truly world-class service.",
+      "image": "/images/table-decor.jpg"
+    },
+    {
+      "author": "— Clara & James",
+      "quote": "Our Mels celebration was vibrant, joyful, and utterly stress-free. WEG honored our heritage with such elegance and warmth.",
+      "image": "/images/ceremony.jpg"
+    }
+  ],
   "faq_section_headline": "Frequently Asked Questions",
   "faq_section_intro": "Everything you need to know about partnering with WEG Events to craft your bespoke celebration.",
-  "cta_headline": "Your Celebration Begins Here",
-  "cta_subtext": "Let\u2019s craft an extraordinary, seamless event that reflects your unique story.",
-  "footer_brand_tagline": "Refined luxury event planning and bespoke wedding management across Ethiopia & destination celebrations worldwide.",
-  "footer_email": "info@wegevents.com",
-  "footer_phone": "+251 954 920 010",
-  "footer_location": "Addis Ababa, Ethiopia",
-  "footer_instagram_url": "https://instagram.com",
-  "footer_tiktok_url": "https://tiktok.com",
-  "footer_linkedin_url": "https://linkedin.com",
-  "footer_telegram_url": "https://t.me/wegevents",
-  "footer_copyright": "\u00a9 2025 Weg Events. All rights reserved.",
   "faqs": [
     {
       "question": "What services does WEG Events offer?",
@@ -68,7 +74,7 @@
     },
     {
       "question": "How do I get started with WEG Events?",
-      "answer": "The first step is to get in touch with us and share your event details and needs. After reviewing our packages and deciding to move forward, we\u2019ll schedule a meeting to learn more about your vision, ask important questions, and create a personalized plan."
+      "answer": "The first step is to get in touch with us and share your event details and needs. After reviewing our packages and deciding to move forward, we’ll schedule a meeting to learn more about your vision, ask important questions, and create a personalized plan."
     },
     {
       "question": "Do you travel for destination weddings?",
@@ -79,21 +85,15 @@
       "answer": "We recommend booking at least 6 to 12 months in advance, especially for peak wedding seasons, to ensure availability and thorough planning."
     }
   ],
-  "testimonials": [
-    {
-      "image": "/images/hosts.jpg",
-      "quote": "WEG Events transformed our dream wedding into pure magic. Every detail was executed with grace, leaving us and our families completely worry-free.",
-      "author": "\u2014 Sofia & Luca"
-    },
-    {
-      "image": "/images/table-decor.jpg",
-      "quote": "From our first consultation to the final dance, Bethel and the team delivered beyond anything we could have imagined. Truly world-class service.",
-      "author": "\u2014 Mei & Thomas"
-    },
-    {
-      "image": "/images/ceremony.jpg",
-      "quote": "Our Mels celebration was vibrant, joyful, and utterly stress-free. WEG honored our heritage with such elegance and warmth.",
-      "author": "\u2014 Clara & James"
-    }
-  ]
+  "cta_headline": "Your Celebration Begins Here",
+  "cta_subtext": "Let’s craft an extraordinary, seamless event that reflects your unique story.",
+  "footer_brand_tagline": "Refined luxury event planning and bespoke wedding management across Ethiopia & destination celebrations worldwide.",
+  "footer_email": "info@wegevents.com",
+  "footer_phone": "+251 954 920 010",
+  "footer_location": "Addis Ababa, Ethiopia",
+  "footer_instagram_url": "https://instagram.com",
+  "footer_tiktok_url": "https://tiktok.com",
+  "footer_linkedin_url": "https://linkedin.com",
+  "footer_telegram_url": "https://t.me/wegevents",
+  "footer_copyright": "© 2025 Weg Events. All rights reserved."
 }
