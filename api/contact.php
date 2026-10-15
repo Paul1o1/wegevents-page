@@ -63,8 +63,8 @@ if (!empty($errors)) {
 
 // 4. Email Recipients & Settings
 // Inquiries will be sent to the WEG Events inbox
-$to_email = 'info@wegevents.com';
-$from_email = 'no-reply@wegevents.et'; // Standard cPanel domain address
+$to_email = 'info@wegevents.et';
+$from_email = 'info@wegevents.et'; // Standard cPanel domain address
 $subject = "💍 New Wedding Inquiry: " . $name . " — " . $service;
 
 // 5. Luxury HTML Email Body for WEG Team
@@ -139,7 +139,7 @@ $headers .= "Reply-To: " . $name . " <" . $email . ">\r\n";
 $headers .= "X-Mailer: PHP/" . phpversion();
 
 // 7. Send the email
-$mail_sent = mail($to_email, $subject, $email_body, $headers);
+$mail_sent = mail($to_email, $subject, $email_body, $headers, "-f " . $from_email);
 
 // 8. Auto-responder email to the Client
 $client_subject = "Thank you for reaching out to WEG Events";
@@ -182,7 +182,7 @@ $client_headers  = "MIME-Version: 1.0\r\n";
 $client_headers .= "Content-type: text/html; charset=UTF-8\r\n";
 $client_headers .= "From: WEG Events <" . $from_email . ">\r\n";
 $client_headers .= "Reply-To: WEG Events <" . $to_email . ">\r\n";
-mail($email, $client_subject, $client_body, $client_headers);
+mail($email, $client_subject, $client_body, $client_headers, "-f " . $from_email);
 
 // 9. Return JSON response to frontend
 echo json_encode([
