@@ -55,16 +55,6 @@
   "testimonial3_author": "\u2014 Clara & James",
   "faq_section_headline": "Frequently Asked Questions",
   "faq_section_intro": "Everything you need to know about partnering with WEG Events to craft your bespoke celebration.",
-  "faq1_question": "What services does WEG Events offer?",
-  "faq1_answer": "We offer a range of wedding and event planning services, including Wedding-Day Coordination, Full Wedding Management, and Mels Day Planning, as well as bespoke corporate event solutions.",
-  "faq2_question": "Can I customize the packages?",
-  "faq2_answer": "Yes! All of our packages can be tailored to meet your unique needs and preferences.",
-  "faq3_question": "How do I get started with WEG Events?",
-  "faq3_answer": "The first step is to get in touch with us and share your event details and needs. After reviewing our packages and deciding to move forward, we\u2019ll schedule a meeting to learn more about your vision, ask important questions, and create a personalized plan.",
-  "faq4_question": "Do you travel for destination weddings?",
-  "faq4_answer": "Yes, we plan destination weddings both within Ethiopia and internationally. Travel and accommodation fees apply depending on the location.",
-  "faq5_question": "How far in advance should I book your services?",
-  "faq5_answer": "We recommend booking at least 6 to 12 months in advance, especially for peak wedding seasons, to ensure availability and thorough planning.",
   "cta_headline": "Your Celebration Begins Here",
   "cta_subtext": "Let\u2019s craft an extraordinary, seamless event that reflects your unique story.",
   "footer_brand_tagline": "Refined luxury event planning and bespoke wedding management across Ethiopia & destination celebrations worldwide.",
@@ -75,5 +65,27 @@
   "footer_tiktok_url": "https://tiktok.com",
   "footer_linkedin_url": "https://linkedin.com",
   "footer_telegram_url": "https://t.me/wegevents",
-  "footer_copyright": "\u00a9 2025 Weg Events. All rights reserved."
+  "footer_copyright": "\u00a9 2025 Weg Events. All rights reserved.",
+  "faqs": [
+    {
+      "question": "What services does WEG Events offer?",
+      "answer": "We offer a range of wedding and event planning services, including Wedding-Day Coordination, Full Wedding Management, and Mels Day Planning, as well as bespoke corporate event solutions."
+    },
+    {
+      "question": "Can I customize the packages?",
+      "answer": "Yes! All of our packages can be tailored to meet your unique needs and preferences."
+    },
+    {
+      "question": "How do I get started with WEG Events?",
+      "answer": "The first step is to get in touch with us and share your event details and needs. After reviewing our packages and deciding to move forward, we\u2019ll schedule a meeting to learn more about your vision, ask important questions, and create a personalized plan."
+    },
+    {
+      "question": "Do you travel for destination weddings?",
+      "answer": "Yes, we plan destination weddings both within Ethiopia and internationally. Travel and accommodation fees apply depending on the location."
+    },
+    {
+      "question": "How far in advance should I book your services?",
+      "answer": "We recommend booking at least 6 to 12 months in advance, especially for peak wedding seasons, to ensure availability and thorough planning."
+    }
+  ]
 }

@@ -254,45 +254,16 @@ content:
         label: "FAQ — Introductory Paragraph"
         type: text
 
-      - name: faq1_question
-        label: "FAQ 1 — Question"
-        type: string
-
-      - name: faq1_answer
-        label: "FAQ 1 — Answer"
-        type: text
-
-      - name: faq2_question
-        label: "FAQ 2 — Question"
-        type: string
-
-      - name: faq2_answer
-        label: "FAQ 2 — Answer"
-        type: text
-
-      - name: faq3_question
-        label: "FAQ 3 — Question"
-        type: string
-
-      - name: faq3_answer
-        label: "FAQ 3 — Answer"
-        type: text
-
-      - name: faq4_question
-        label: "FAQ 4 — Question"
-        type: string
-
-      - name: faq4_answer
-        label: "FAQ 4 — Answer"
-        type: text
-
-      - name: faq5_question
-        label: "FAQ 5 — Question"
-        type: string
-
-      - name: faq5_answer
-        label: "FAQ 5 — Answer"
-        type: text
+      - name: faqs
+        label: "FAQ Questions & Answers (Click + Add Item to add new questions)"
+        type: list
+        fields:
+          - name: question
+            label: "Question"
+            type: string
+          - name: answer
+            label: "Answer"
+            type: text
 
       # ── PRE-FOOTER CTA ─────────────────────────────────────
       - name: cta_headline
@@ -603,184 +574,25 @@ content:
         label: "Hero — Sub-headline Description"
         type: text
 
-      - name: gallery_card1_image
-        label: "Gallery Card 1 — Photo"
-        type: image
-      - name: gallery_card1_category
-        label: "Gallery Card 1 — Category Tag"
-        type: string
-      - name: gallery_card1_title
-        label: "Gallery Card 1 — Couple / Event Title"
-        type: string
-      - name: gallery_card1_desc
-        label: "Gallery Card 1 — Description"
-        type: text
-
-      - name: gallery_card2_image
-        label: "Gallery Card 2 — Photo"
-        type: image
-      - name: gallery_card2_category
-        label: "Gallery Card 2 — Category Tag"
-        type: string
-      - name: gallery_card2_title
-        label: "Gallery Card 2 — Couple / Event Title"
-        type: string
-      - name: gallery_card2_desc
-        label: "Gallery Card 2 — Description"
-        type: text
-
-      - name: gallery_card3_image
-        label: "Gallery Card 3 — Photo"
-        type: image
-      - name: gallery_card3_category
-        label: "Gallery Card 3 — Category Tag"
-        type: string
-      - name: gallery_card3_title
-        label: "Gallery Card 3 — Couple / Event Title"
-        type: string
-      - name: gallery_card3_desc
-        label: "Gallery Card 3 — Description"
-        type: text
-
-      - name: gallery_card4_image
-        label: "Gallery Card 4 — Photo"
-        type: image
-      - name: gallery_card4_category
-        label: "Gallery Card 4 — Category Tag"
-        type: string
-      - name: gallery_card4_title
-        label: "Gallery Card 4 — Couple / Event Title"
-        type: string
-      - name: gallery_card4_desc
-        label: "Gallery Card 4 — Description"
-        type: text
-
-      - name: gallery_card5_image
-        label: "Gallery Card 5 — Photo"
-        type: image
-      - name: gallery_card5_category
-        label: "Gallery Card 5 — Category Tag"
-        type: string
-      - name: gallery_card5_title
-        label: "Gallery Card 5 — Couple / Event Title"
-        type: string
-      - name: gallery_card5_desc
-        label: "Gallery Card 5 — Description"
-        type: text
-
-      - name: gallery_card6_image
-        label: "Gallery Card 6 — Photo"
-        type: image
-      - name: gallery_card6_category
-        label: "Gallery Card 6 — Category Tag"
-        type: string
-      - name: gallery_card6_title
-        label: "Gallery Card 6 — Couple / Event Title"
-        type: string
-      - name: gallery_card6_desc
-        label: "Gallery Card 6 — Description"
-        type: text
-
-      - name: gallery_card7_image
-        label: "Gallery Card 7 — Photo"
-        type: image
-      - name: gallery_card7_category
-        label: "Gallery Card 7 — Category Tag"
-        type: string
-      - name: gallery_card7_title
-        label: "Gallery Card 7 — Couple / Event Title"
-        type: string
-      - name: gallery_card7_desc
-        label: "Gallery Card 7 — Description"
-        type: text
-
-      - name: gallery_card8_image
-        label: "Gallery Card 8 — Photo"
-        type: image
-      - name: gallery_card8_category
-        label: "Gallery Card 8 — Category Tag"
-        type: string
-      - name: gallery_card8_title
-        label: "Gallery Card 8 — Couple / Event Title"
-        type: string
-      - name: gallery_card8_desc
-        label: "Gallery Card 8 — Description"
-        type: text
-
-      - name: gallery_card9_image
-        label: "Gallery Card 9 — Photo"
-        type: image
-      - name: gallery_card9_category
-        label: "Gallery Card 9 — Category Tag"
-        type: string
-      - name: gallery_card9_title
-        label: "Gallery Card 9 — Couple / Event Title"
-        type: string
-      - name: gallery_card9_desc
-        label: "Gallery Card 9 — Description"
-        type: text
-
-      - name: gallery_card10_image
-        label: "Gallery Card 10 — Photo"
-        type: image
-      - name: gallery_card10_category
-        label: "Gallery Card 10 — Category Tag"
-        type: string
-      - name: gallery_card10_title
-        label: "Gallery Card 10 — Couple / Event Title"
-        type: string
-      - name: gallery_card10_desc
-        label: "Gallery Card 10 — Description"
-        type: text
-
-      - name: gallery_card11_image
-        label: "Gallery Card 11 — Photo"
-        type: image
-      - name: gallery_card11_category
-        label: "Gallery Card 11 — Category Tag"
-        type: string
-      - name: gallery_card11_title
-        label: "Gallery Card 11 — Couple / Event Title"
-        type: string
-      - name: gallery_card11_desc
-        label: "Gallery Card 11 — Description"
-        type: text
-
-      - name: gallery_card12_image
-        label: "Gallery Card 12 — Photo"
-        type: image
-      - name: gallery_card12_category
-        label: "Gallery Card 12 — Category Tag"
-        type: string
-      - name: gallery_card12_title
-        label: "Gallery Card 12 — Couple / Event Title"
-        type: string
-      - name: gallery_card12_desc
-        label: "Gallery Card 12 — Description"
-        type: text
-
-      - name: gallery_card13_image
-        label: "Gallery Card 13 — Photo"
-        type: image
-      - name: gallery_card13_category
-        label: "Gallery Card 13 — Category Tag"
-        type: string
-      - name: gallery_card13_title
-        label: "Gallery Card 13 — Couple / Event Title"
-        type: string
-      - name: gallery_card13_desc
-        label: "Gallery Card 13 — Description"
-        type: text
-
-      - name: gallery_card14_image
-        label: "Gallery Card 14 — Photo"
-        type: image
-      - name: gallery_card14_category
-        label: "Gallery Card 14 — Category Tag"
-        type: string
-      - name: gallery_card14_title
-        label: "Gallery Card 14 — Couple / Event Title"
-        type: string
-      - name: gallery_card14_desc
-        label: "Gallery Card 14 — Description"
-        type: text
+      - name: gallery_cards
+        label: "Gallery Celebrations (Click + Add Item to add new photos & stories)"
+        type: list
+        fields:
+          - name: image
+            label: "Photo"
+            type: image
+          - name: category
+            label: "Category Tag (e.g. Destination Wedding, Cultural Mels, Weddings, Corporate)"
+            type: string
+          - name: title
+            label: "Couple / Event Name"
+            type: string
+          - name: description
+            label: "Short Story / Description"
+            type: text
+          - name: link
+            label: "Story Link (e.g. contact.html or /case-study/story-name.html)"
+            type: string
+          - name: button_text
+            label: "Button Text (e.g. Read Story or Inquire For Details)"
+            type: string
