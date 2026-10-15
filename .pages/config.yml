@@ -46,8 +46,14 @@ content:
         type: string
 
       - name: hero_video_src
-        label: "Hero — Background Video File"
-        type: image
+        label: "Hero — Background Video File (.mp4)"
+        type: file
+        categories:
+          - video
+        extensions:
+          - mp4
+          - webm
+          - mov
 
       - name: hero_video_poster
         label: "Hero — Video Fallback / Poster Image"
