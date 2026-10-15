@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://wegevents.com/sitemap.xml
+Sitemap: https://wegevents.et/sitemap.xml
