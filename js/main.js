@@ -343,12 +343,8 @@ document.addEventListener('DOMContentLoaded', () => {
             formInner.style.display = 'none';
             const nameEl = document.getElementById('success-client-name');
             const serviceEl = document.getElementById('success-service-name');
-            const emailEl = document.getElementById('success-client-email');
-            const phoneEl = document.getElementById('success-client-phone');
             if (nameEl) nameEl.textContent = formPayload.name;
             if (serviceEl) serviceEl.textContent = formPayload.service;
-            if (emailEl) emailEl.textContent = formPayload.email;
-            if (phoneEl) phoneEl.textContent = formPayload.phone;
             successState.style.display = 'block';
 
             const formPanel = document.getElementById('contact-form-panel');
