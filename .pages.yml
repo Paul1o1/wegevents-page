@@ -255,8 +255,12 @@ content:
         type: text
 
       - name: faqs
-        label: "FAQ Questions & Answers (Click + Add Item to add new questions)"
-        type: list
+        label: "FAQ Questions & Answers"
+        type: object
+        list:
+          collapsible: true
+          collapsed: true
+          summary: "{question}"
         fields:
           - name: question
             label: "Question"
@@ -575,8 +579,12 @@ content:
         type: text
 
       - name: gallery_cards
-        label: "Gallery Celebrations (Click + Add Item to add new photos & stories)"
-        type: list
+        label: "Gallery Celebrations"
+        type: object
+        list:
+          collapsible: true
+          collapsed: true
+          summary: "{title} ({category})"
         fields:
           - name: image
             label: "Photo"
