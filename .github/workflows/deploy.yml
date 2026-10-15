@@ -13,6 +13,9 @@ jobs:
     steps:
     - name: 🚚 Get latest code
       uses: actions/checkout@v4
+
+    - name: 🛠️ Compile website with latest CMS content
+      run: python scripts/build.py
     
     - name: 📂 Sync files to cPanel
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5

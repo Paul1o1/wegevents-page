@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ seo_title }}</title>
+  <meta name="description" content="{{ seo_description }}">
+  <link rel="icon" href="/images/logo/weg web1-02.svg" type="image/svg+xml">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <!-- Fixed Navigation -->
+  <header class="header-fixed navbar-luxury">
+    <div class="header-inner">
+      <a href="/" class="brand-logo-lux">
+        <img src="/images/logo/weg web1-02.svg" alt="WEG Events" class="brand-logo-img">
+        <span class="brand-text">WEG EVENTS</span>
+      </a>
+
+      <nav class="nav-links-center">
+        <a href="about.html" class="nav-item">ABOUT</a>
+        <a href="service.html" class="nav-item">SERVICES</a>
+        <a href="gallery.html" class="nav-item">GALLERY</a>
+        <a href="process.html" class="nav-item">OUR PROCESSES</a>
+        <a href="blog.html" class="nav-item">BLOG</a>
+      </nav>
+
+      <div class="header-right">
+        <a href="contact.html" class="btn-story-pill">
+          <svg class="pill-rings-icon" viewBox="0 0 24 24">
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+          
+          <span>BEGIN YOUR STORY</span>
+        </a>
+        <button class="mobile-toggle" aria-label="Toggle Menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-frame-container">
+    <div class="hero-frame-inner">
+      <video class="hero-video-bg" autoplay muted loop playsinline poster="{{ hero_video_poster }}">
+        <source src="{{ hero_video_src }}" type="video/mp4">
+      </video>
+      <div class="hero-scenic-overlay"></div>
+
+      <!-- Side Rotated Labels -->
+      <div class="hero-side-text left">
+        <span>{{ hero_left_label }}</span>
+      </div>
+      <div class="hero-side-text right">
+        <span>{{ hero_right_label }}</span>
+      </div>
+
+      <!-- Main Center Content -->
+      <div class="hero-center-stage">
+        <!-- Top Botanical Monogram Badge -->
+        <img src="/images/logo/weg web1-02.svg" alt="WEG Events" class="hero-logo-badge">
+
+        <!-- Huge Headline -->
+        <h1 class="hero-huge-title">
+          <span class="title-word">WEG</span>
+          <span class="title-word">EVENTS</span>
+        </h1>
+
+        <!-- Tagline -->
+        <div class="hero-tagline-container">
+          <p class="hero-tagline-text">{{ hero_tagline }}</p>
+        </div>
+      </div>
+
+      <!-- Bottom Marquee -->
+      <div class="hero-marquee-footer">
+        <div class="marquee-track">
+          <span>WEDDINGS</span>
+          <span class="sep">✦</span>
+          <span>CORPORATE EVENTS</span>
+          <span class="sep">✦</span>
+          <span>MELS DAYS</span>
+          <span class="sep">✦</span>
+          <span>DESTINATION WEDDINGS</span>
+          <span class="sep">✦</span>
+          <span>WEDDINGS</span>
+          <span class="sep">✦</span>
+          <span>CORPORATE EVENTS</span>
+          <span class="sep">✦</span>
+          <span>MELS DAYS</span>
+          <span class="sep">✦</span>
+          <span>DESTINATION WEDDINGS</span>
+          <span class="sep">✦</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ethos Section -->
+  <section class="ethos-section">
+    <!-- Botanical Corner Flourishes -->
+    <div class="ethos-botanical-bg ethos-botanical-top-left" aria-hidden="true">
+      <img src="/images/vJFMyA8wspY76j5iS49c0Mipu0.svg" alt="" class="ethos-leaf-svg">
+    </div>
+    <div class="ethos-botanical-bg ethos-botanical-bottom-right" aria-hidden="true">
+      <img src="/images/p0APXZbHB7xxjNvT25XMSztZwJA.svg" alt="" class="ethos-leaf-svg">
+    </div>
+
+    <div class="ethos-container">
+      <!-- Centered Top Botanical Wreath Badge -->
+      <div class="ethos-badge-wrap">
+        <div class="ethos-wreath-badge">
+          <img src="/images/AlGqaIKthGdqFYhy3zu7DQums.svg" alt="Botanical Wreath" class="ethos-wreath-img" aria-hidden="true">
+          <span class="ethos-badge-text">{{ ethos_badge_text }}</span>
+        </div>
+      </div>
+
+      <!-- Headline Banner -->
+      <div class="ethos-headline-banner">
+        <h2 class="ethos-headline-title">{{ ethos_headline }}</h2>
+      </div>
+
+      <!-- Two-Column Grid -->
+      <div class="ethos-split-grid">
+        <!-- Left Column -->
+        <div class="ethos-col">
+          <h3 class="ethos-col-title">{{ ethos_philosophy_title }}</h3>
+          <p class="ethos-col-desc">
+            {{ ethos_philosophy_body }}
+          </p>
+          <div class="ethos-gallery-strip">
+            <div class="ethos-gallery-track">
+              <div class="ethos-gallery-item">
+                <img src="/images/ceremony.jpg" alt="Ceremony" class="ethos-gallery-img" loading="lazy">
+              </div>
+              <div class="ethos-gallery-item">
+                <img src="/images/table-decor.jpg" alt="Table Decor" class="ethos-gallery-img" loading="lazy">
+              </div>
+              <div class="ethos-gallery-item">
+                <img src="/images/hosts.jpg" alt="Hosts" class="ethos-gallery-img" loading="lazy">
+              </div>
+              <div class="ethos-gallery-item">
+                <img src="/images/welcome-sign.jpg" alt="Welcome" class="ethos-gallery-img" loading="lazy">
+              </div>
+              <div class="ethos-gallery-item">
+                <img src="/images/ceremony.jpg" alt="Ceremony" class="ethos-gallery-img" loading="lazy">
+              </div>
+              <div class="ethos-gallery-item">
+                <img src="/images/table-decor.jpg" alt="Table Decor" class="ethos-gallery-img" loading="lazy">
+              </div>
+              <div class="ethos-gallery-item">
+                <img src="/images/hosts.jpg" alt="Hosts" class="ethos-gallery-img" loading="lazy">
+              </div>
+              <div class="ethos-gallery-item">
+                <img src="/images/welcome-sign.jpg" alt="Welcome" class="ethos-gallery-img" loading="lazy">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Center Divider -->
+        <div class="ethos-center-divider" aria-hidden="true"></div>
+
+        <!-- Right Column -->
+        <div class="ethos-col">
+          <h3 class="ethos-col-title">{{ ethos_journey_title }}</h3>
+          <p class="ethos-col-desc">
+            {{ ethos_journey_body }}
+          </p>
+          <div class="ethos-stats-grid">
+            <div class="ethos-stat-card">
+              <div class="stat-emblem"><img src="/images/ftO8kifeghtEXTRrwjd3PQcrc.svg" alt="" class="stat-crest-icon" aria-hidden="true"></div>
+              <div class="ethos-stat-num">{{ ethos_stat1_number }}</div>
+              <div class="ethos-stat-label">{{ ethos_stat1_label }}</div>
+              <p class="ethos-stat-text">{{ ethos_stat1_text }}</p>
+            </div>
+            <div class="ethos-stat-card">
+              <div class="stat-emblem"><img src="/images/ftO8kifeghtEXTRrwjd3PQcrc.svg" alt="" class="stat-crest-icon" aria-hidden="true"></div>
+              <div class="ethos-stat-num">{{ ethos_stat2_number }}</div>
+              <div class="ethos-stat-label">{{ ethos_stat2_label }}</div>
+              <p class="ethos-stat-text">{{ ethos_stat2_text }}</p>
+            </div>
+            <div class="ethos-stat-card">
+              <div class="stat-emblem"><img src="/images/ftO8kifeghtEXTRrwjd3PQcrc.svg" alt="" class="stat-crest-icon" aria-hidden="true"></div>
+              <div class="ethos-stat-num">{{ ethos_stat3_number }}</div>
+              <div class="ethos-stat-label">{{ ethos_stat3_label }}</div>
+              <p class="ethos-stat-text">{{ ethos_stat3_text }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Showcase -->
+  <section class="services-showcase-section">
+    <div class="services-showcase-grid">
+      <!-- Left Column: Image with Overlay -->
+      <div class="services-showcase-left">
+        <img src="{{ services_bg_image }}" alt="Luxury Wedding" class="services-showcase-bg">
+        <div class="services-showcase-overlay"></div>
+        <div class="services-showcase-left-inner">
+          <div class="services-showcase-header">
+            <p class="sub-heading" style="color: var(--weg-gold-light); margin-bottom: 0.5rem;">{{ services_eyebrow }}</p>
+            <h2 class="services-showcase-title">{{ services_headline }}</h2>
+            <p class="services-showcase-desc">{{ services_description }}</p>
+          </div>
+          <div class="services-showcase-footer">
+            <a href="service.html" class="services-btn-view">
+              VIEW ALL SERVICES
+              <svg class="services-btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Services List -->
+      <div class="services-showcase-right">
+        <div class="services-showcase-right-inner">
+          <p class="services-offer-tag">What We Offer</p>
+          <div class="services-showcase-list">
+            <a href="service/full-planning-design.html" class="services-showcase-item">
+              <div class="services-item-info">
+                <h3 class="services-item-title">Full Planning &amp; Design</h3>
+                <span class="services-item-sub">End-to-end creation</span>
+              </div>
+              <div class="services-item-arrow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                
+              </div>
+            </a>
+            <a href="service/partial-planning.html" class="services-showcase-item">
+              <div class="services-item-info">
+                <h3 class="services-item-title">Partial Planning</h3>
+                <span class="services-item-sub">Step-in support</span>
+              </div>
+              <div class="services-item-arrow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                
+              </div>
+            </a>
+            <a href="service/day-of-coordination.html" class="services-showcase-item">
+              <div class="services-item-info">
+                <h3 class="services-item-title">Day-of Coordination</h3>
+                <span class="services-item-sub">Flawless execution</span>
+              </div>
+              <div class="services-item-arrow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                
+              </div>
+            </a>
+            <a href="service/destination-weddings.html" class="services-showcase-item">
+              <div class="services-item-info">
+                <h3 class="services-item-title">Destination Weddings</h3>
+                <span class="services-item-sub">Europe &amp; beyond</span>
+              </div>
+              <div class="services-item-arrow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Preview Section (Couples We've Celebrated) -->
+  <section class="section-padding" style="background-color: var(--weg-bg-sand);">
+    <div class="container">
+      <div class="text-center" style="margin-bottom: 3.5rem;">
+        <p class="sub-heading">{{ gallery_section_eyebrow }}</p>
+        <h2 class="heading-lg">{{ gallery_section_headline }}</h2>
+        <p class="text-muted" style="max-width: 580px; margin: 0.75rem auto 0 auto; font-size: 1.1rem;">
+          {{ gallery_section_intro }}
+        </p>
+      </div>
+
+      <div class="gallery-cards-grid">
+
+        <!-- Card 1 -->
+        <article class="gallery-story-card">
+          <div class="gallery-card-img-wrap">
+            <img src="{{ gallery_card1_image }}" alt="{{ gallery_card1_title }}" class="gallery-card-img" loading="lazy">
+          </div>
+          <div class="gallery-card-body">
+            <p class="gallery-card-cat">{{ gallery_card1_category }}</p>
+            <h3 class="gallery-card-title">{{ gallery_card1_title }}</h3>
+            <p class="gallery-card-desc">{{ gallery_card1_description }}</p>
+            <a href="gallery.html" class="gallery-card-btn">View Gallery</a>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="gallery-story-card">
+          <div class="gallery-card-img-wrap">
+            <img src="{{ gallery_card2_image }}" alt="{{ gallery_card2_title }}" class="gallery-card-img" loading="lazy">
+          </div>
+          <div class="gallery-card-body">
+            <p class="gallery-card-cat">{{ gallery_card2_category }}</p>
+            <h3 class="gallery-card-title">{{ gallery_card2_title }}</h3>
+            <p class="gallery-card-desc">{{ gallery_card2_description }}</p>
+            <a href="gallery.html" class="gallery-card-btn">View Gallery</a>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="gallery-story-card">
+          <div class="gallery-card-img-wrap">
+            <img src="{{ gallery_card3_image }}" alt="{{ gallery_card3_title }}" class="gallery-card-img" loading="lazy">
+          </div>
+          <div class="gallery-card-body">
+            <p class="gallery-card-cat">{{ gallery_card3_category }}</p>
+            <h3 class="gallery-card-title">{{ gallery_card3_title }}</h3>
+            <p class="gallery-card-desc">{{ gallery_card3_description }}</p>
+            <a href="gallery.html" class="gallery-card-btn">View Gallery</a>
+          </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="gallery-story-card">
+          <div class="gallery-card-img-wrap">
+            <img src="{{ gallery_card4_image }}" alt="{{ gallery_card4_title }}" class="gallery-card-img" loading="lazy">
+          </div>
+          <div class="gallery-card-body">
+            <p class="gallery-card-cat">{{ gallery_card4_category }}</p>
+            <h3 class="gallery-card-title">{{ gallery_card4_title }}</h3>
+            <p class="gallery-card-desc">{{ gallery_card4_description }}</p>
+            <a href="gallery.html" class="gallery-card-btn">View Gallery</a>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="text-center" style="margin-top: 3rem;">
+        <a href="gallery.html" class="btn btn-gold">View All Celebrations</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonial Hero Section -->
+  <section class="testimonial-hero-section">
+    <div class="testimonial-hero-slides">
+      <div class="testimonial-hero-slide active">
+        <img src="{{ testimonial1_image }}" alt="Testimonial background" class="testimonial-hero-bg">
+        <div class="testimonial-hero-overlay"></div>
+        <div class="testimonial-hero-content">
+          <img src="/images/lR0dc3W8oIg4D9UWD3fIwe639h0.svg" alt="Quote" class="testimonial-hero-quote-icon" aria-hidden="true">
+          <p class="testimonial-hero-quote">"{{ testimonial1_quote }}"</p>
+          <span class="testimonial-hero-author">{{ testimonial1_author }}</span>
+        </div>
+      </div>
+      <div class="testimonial-hero-slide">
+        <img src="{{ testimonial2_image }}" alt="Testimonial background" class="testimonial-hero-bg">
+        <div class="testimonial-hero-overlay"></div>
+        <div class="testimonial-hero-content">
+          <img src="/images/lR0dc3W8oIg4D9UWD3fIwe639h0.svg" alt="Quote" class="testimonial-hero-quote-icon" aria-hidden="true">
+          <p class="testimonial-hero-quote">"{{ testimonial2_quote }}"</p>
+          <span class="testimonial-hero-author">{{ testimonial2_author }}</span>
+        </div>
+      </div>
+      <div class="testimonial-hero-slide">
+        <img src="{{ testimonial3_image }}" alt="Testimonial background" class="testimonial-hero-bg">
+        <div class="testimonial-hero-overlay"></div>
+        <div class="testimonial-hero-content">
+          <img src="/images/lR0dc3W8oIg4D9UWD3fIwe639h0.svg" alt="Quote" class="testimonial-hero-quote-icon" aria-hidden="true">
+          <p class="testimonial-hero-quote">"{{ testimonial3_quote }}"</p>
+          <span class="testimonial-hero-author">{{ testimonial3_author }}</span>
+        </div>
+      </div>
+    </div>
+    <button class="testimonial-nav-arrow testimonial-prev" id="testimonialPrev" aria-label="Previous testimonial">
+      <img src="/images/DkQw4cZUJ9BZIbFHsKEfCtEgYIs.svg" alt="Previous" class="testimonial-arrow-icon">
+    </button>
+    <button class="testimonial-nav-arrow testimonial-next" id="testimonialNext" aria-label="Next testimonial">
+      <img src="/images/XtEjJWF9jd8itVC0zjpkOU3N4jM.svg" alt="Next" class="testimonial-arrow-icon">
+    </button>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section-padding faq-home-section" style="background-color: var(--weg-bg-cream);">
+    <div class="container">
+      <div class="text-center" style="margin-bottom: 3.5rem;">
+        <p class="sub-heading">FAQ • Start Here For Answers</p>
+        <h2 class="heading-lg">{{ faq_section_headline }}</h2>
+        <p class="text-muted" style="max-width: 620px; margin: 0.75rem auto 0 auto; font-size: 1.1rem;">
+          {{ faq_section_intro }}
+        </p>
+      </div>
+
+      <div class="faq-container">
+        <!-- FAQ 1 -->
+        <div class="faq-item active">
+          <button class="faq-question" type="button" aria-expanded="true">
+            <span>{{ faq1_question }}</span>
+            <span class="icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>{{ faq1_answer }}</p>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span>{{ faq2_question }}</span>
+            <span class="icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>{{ faq2_answer }}</p>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span>{{ faq3_question }}</span>
+            <span class="icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>{{ faq3_answer }}</p>
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span>{{ faq4_question }}</span>
+            <span class="icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>{{ faq4_answer }}</p>
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span>{{ faq5_question }}</span>
+            <span class="icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>{{ faq5_answer }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pre-Footer Banner -->
+  <section class="pre-footer-banner">
+    <img src="/images/6zToza5iuRomSzxEhTV7iEWIuw.svg" alt="" class="pre-footer-flourish flourish-bg-left" aria-hidden="true">
+    <img src="/images/p0APXZbHB7xxjNvT25XMSztZwJA.svg" alt="" class="pre-footer-flourish flourish-bg-right" aria-hidden="true">
+    <div class="container pre-footer-inner">
+      <div class="pre-footer-emblem">
+        <img src="/images/ftO8kifeghtEXTRrwjd3PQcrc.svg" alt="WEG Events Crest" class="pre-footer-crest" aria-hidden="true">
+      </div>
+      <h2>{{ cta_headline }}</h2>
+      <p>{{ cta_subtext }}</p>
+      <a href="contact.html" class="btn btn-gold">Get In Touch</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>WEG Events</h3>
+          <p>{{ footer_brand_tagline }}</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="service.html">Our Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="process.html">Our Processes</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="service/full-planning-design.html">Full Planning &amp; Design</a></li>
+            <li><a href="service/partial-planning.html">Partial Planning</a></li>
+            <li><a href="service/day-of-coordination.html">Day-of Coordination</a></li>
+            <li><a href="service/destination-weddings.html">Destination Weddings</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <ul class="footer-contact-list">
+            <li>
+              <a href="mailto:{{ footer_email }}" class="footer-contact-link">
+                <img src="/images/2ezx07Wi4GFhhqfAoZShttGKqhI.svg" alt="Email" class="footer-contact-icon">
+                <span>{{ footer_email }}</span>
+              </a>
+            </li>
+            <li>
+              <a href="tel:{{ footer_phone }}" class="footer-contact-link">
+                <img src="/images/pGwJeuBKL0qjTsWgiZuWh7lxBFk.svg" alt="Phone" class="footer-contact-icon">
+                <span>{{ footer_phone }}</span>
+              </a>
+            </li>
+            <li>
+              <span class="footer-contact-link">
+                <img src="/images/uRT77mdPYlhkAD0xAOYd29O8Gjs.svg" alt="Location" class="footer-contact-icon">
+                <span>{{ footer_location }}</span>
+              </span>
+            </li>
+          </ul>
+          <div class="social-links" style="margin-top: 1.5rem;">
+            <a href="{{ footer_instagram_url }}" class="social-link" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="{{ footer_tiktok_url }}" class="social-link" target="_blank" rel="noopener" aria-label="TikTok">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.89 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 0 0-.79-.05A6.34 6.34 0 0 0 3 15.67 6.34 6.34 0 0 0 9.34 22a6.34 6.34 0 0 0 6.34-6.33V9.17a8.16 8.16 0 0 0 4.91 1.62v-3.5a4.85 4.85 0 0 1-1-.6z"/></svg>
+            </a>
+            <a href="{{ footer_linkedin_url }}" class="social-link" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.65 1.65 0 1 0 0-3.3 1.65 1.65 0 0 0 0 3.3m1.4 9.74V9.97H5.06v8.53h2.8z"/></svg>
+            </a>
+            <a href="{{ footer_telegram_url }}" class="social-link" target="_blank" rel="noopener" aria-label="Telegram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>{{ footer_copyright }}</p>
+        <div>
+          <a href="legal/privacy-policy.html" style="margin-right: 1.5rem;">Privacy Policy</a>
+          <a href="legal/terms-conditions.html">Terms &amp; Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="/js/main.js"></script>
+  <script src="/js/weg-animations.js"></script>
+  <!-- Back To Top -->
+  <button class="back-to-top-btn" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"></path></svg>
+  </button>
+</body>
+</html>

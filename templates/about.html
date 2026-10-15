@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ about_seo_title }}</title>
+  <meta name="description" content="{{ about_seo_description }}">
+  <link rel="icon" href="/images/ftO8kifeghtEXTRrwjd3PQcrc.svg" type="image/svg+xml">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <!-- Fixed Navigation -->
+  <header class="header-fixed navbar-luxury">
+    <div class="header-inner">
+      <a href="/" class="brand-logo-lux">
+        <img src="/images/logo/weg web1-02.svg" alt="WEG Events" class="brand-logo-img">
+          
+        
+        <span class="brand-text">WEG EVENTS</span>
+      </a>
+
+            <nav class="nav-links-center">
+        <a href="about.html" class="nav-item active">ABOUT</a>
+        <a href="service.html" class="nav-item">SERVICES</a>
+        <a href="gallery.html" class="nav-item">GALLERY</a>
+        <a href="process.html" class="nav-item">OUR PROCESSES</a>
+        <a href="blog.html" class="nav-item">BLOG</a>
+      </nav>
+
+      <div class="header-right">
+        <a href="contact.html" class="btn-story-pill">
+          <svg class="pill-rings-icon" viewBox="0 0 24 24">
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+          
+          <span>BEGIN YOUR STORY</span>
+        </a>
+        <button class="mobile-toggle" aria-label="Toggle Menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Hero -->
+  <section class="page-hero" style="background-image: url('{{ about_hero_bg }}');">
+    <div class="page-hero-content">
+      <p class="sub-heading" style="color: var(--weg-gold-light);">{{ about_hero_eyebrow }}</p>
+      <h1 class="heading-display">{{ about_hero_headline }}</h1>
+      <p>{{ about_hero_subheadline }}</p>
+    </div>
+  </section>
+
+  <!-- Founder Story & Cultural Origin -->
+  <section class="section-padding" style="background-color: var(--weg-bg-cream);">
+    <div class="container">
+      <div class="founder-grid">
+        <div data-framer-name="Founder Story">
+          <p class="sub-heading">{{ about_origin_eyebrow }}</p>
+          <h2 class="heading-lg" style="margin-bottom: 1.5rem;">{{ about_origin_headline }}</h2>
+          <p class="text-muted" style="font-size: 1.15rem; line-height: 1.8; margin-bottom: 1.5rem;">
+            WEG was born from a deep love of celebration. We carried a lifelong passion for creating an event company and pursued that passion through dedicated learning and rigorous preparation.
+          </p>
+          <p class="text-muted" style="font-size: 1.15rem; line-height: 1.8; margin-bottom: 1.5rem;">
+            Bethel earned her degree in Event Management in Switzerland, and after returning, she shared that refined global expertise with Halaluya and Rakeb as we took the first foundational steps toward building WEG Events.
+          </p>
+          <p class="text-muted" style="font-size: 1.15rem; line-height: 1.8;">
+            The name <strong>WEG</strong> came from our desire to give it an authentic Amharic name that reflects our culture. In Amharic, <em>“Weg”</em> signifies a cherished traditional custom — and one of our richest traditions is coming together in unity to celebrate. Today, we continue building WEG Events into a premier company committed to bringing people together with genuine hospitality.
+          </p>
+        </div>
+
+        <div class="founder-image-wrap">
+          <img src="{{ about_origin_image }}" alt="WEG Events Founders">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission & Vision Cards -->
+  <section class="section-padding" style="background-color: var(--weg-bg-sand);">
+    <div class="container">
+      <div class="text-center" style="margin-bottom: 3.5rem;">
+        <p class="sub-heading">Our Guiding Purpose</p>
+        <h2 class="heading-lg">Mission &amp; Vision</h2>
+      </div>
+
+      <div class="cards-grid-2">
+        <div class="service-card" data-framer-name="Card" style="background-color: var(--weg-bg-card); padding: 3.5rem 3rem; border-top: 4px solid var(--weg-accent-gold);">
+          <p class="sub-heading" style="margin-bottom: 0.5rem;">{{ about_mission_eyebrow }}</p>
+          <h3 style="font-size: 2rem; margin-bottom: 1.25rem;">{{ about_mission_title }}</h3>
+          <p class="text-muted" style="font-size: 1.15rem; line-height: 1.8;">
+            With WEG Events, you get to relax and simply be a guest at your own event. We take on every logistical detail, timeline pressure, and vendor coordination so you can experience pure joy alongside your loved ones.
+          </p>
+        </div>
+
+        <div class="service-card" data-framer-name="Card" style="background-color: var(--weg-bg-card); padding: 3.5rem 3rem; border-top: 4px solid var(--weg-rose-burgundy);">
+          <p class="sub-heading" style="margin-bottom: 0.5rem; color: var(--weg-rose-burgundy);">{{ about_vision_eyebrow }}</p>
+          <h3 style="font-size: 2rem; margin-bottom: 1.25rem;">{{ about_vision_title }}</h3>
+          <p class="text-muted" style="font-size: 1.15rem; line-height: 1.8;">
+            To set a new benchmark in bespoke event experiences through thoughtful planning, genuine care, cultural elegance, and unwavering professionalism across Ethiopia and destination locations worldwide.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Meet the Team -->
+  <section class="section-padding" style="background-color: var(--weg-bg-cream);">
+    <div class="container">
+      <div class="text-center" style="margin-bottom: 3.5rem;">
+        <p class="sub-heading">Leadership &amp; Passion</p>
+        <h2 class="heading-lg">{{ about_team_headline }}</h2>
+        <p class="text-muted" style="max-width: 600px; margin: 0.75rem auto 0 auto; font-size: 1.1rem;">
+          The passionate founders and lead planners behind every unforgettable WEG experience.
+        </p>
+      </div>
+
+      <div class="cards-grid-3">
+        <!-- Team Member 1 -->
+        <div class="team-card" data-framer-name="Card">
+          <img src="{{ about_team1_image }}" alt="{{ about_team1_name }}" class="team-img">
+          <div class="team-info">
+            <h3 class="team-name">{{ about_team1_name }}</h3>
+            <p class="team-role">{{ about_team1_role }}</p>
+          </div>
+        </div>
+
+        <!-- Team Member 2 -->
+        <div class="team-card" data-framer-name="Card">
+          <img src="{{ about_team2_image }}" alt="{{ about_team2_name }}" class="team-img">
+          <div class="team-info">
+            <h3 class="team-name">{{ about_team2_name }}</h3>
+            <p class="team-role">Co-Founder &amp; Lead Planner</p>
+          </div>
+        </div>
+
+        <!-- Team Member 3 -->
+        <div class="team-card" data-framer-name="Card">
+          <img src="{{ about_team3_image }}" alt="{{ about_team3_name }}" class="team-img">
+          <div class="team-info">
+            <h3 class="team-name">{{ about_team3_name }}</h3>
+            <p class="team-role">Co-Founder &amp; Lead Planner</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pre-Footer Banner -->
+  <section class="pre-footer-banner">
+    <div class="container">
+      <h2>Your Celebration Begins Here</h2>
+      <p>Let’s craft an extraordinary, seamless event that reflects your unique story.</p>
+      <a href="contact.html" class="btn btn-gold">Get In Touch</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>WEG Events</h3>
+          <p>Refined luxury event planning and bespoke wedding management across Ethiopia & destination celebrations worldwide.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+                    <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="service.html">Our Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="process.html">Our Processes</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+                    <ul>
+            <li><a href="service.html#coordination">Wedding-Day Coordination</a></li>
+            <li><a href="service.html#full-management">Full Wedding Management</a></li>
+            <li><a href="service.html#mels">Mels Day Planning</a></li>
+            <li><a href="service.html#corporate">Corporate Events</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="mailto:info@wegevents.com">info@wegevents.com</a></li>
+            <li><a href="tel:+251954920010">+251 954 920 010</a></li>
+          </ul>
+                    <div class="social-links" style="margin-top: 1.25rem;">
+            <a href="https://instagram.com" class="social-link" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="https://tiktok.com" class="social-link" target="_blank" rel="noopener" aria-label="TikTok">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.89 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 0 0-.79-.05A6.34 6.34 0 0 0 3 15.67 6.34 6.34 0 0 0 9.34 22a6.34 6.34 0 0 0 6.34-6.33V9.17a8.16 8.16 0 0 0 4.91 1.62v-3.5a4.85 4.85 0 0 1-1-.6z"/></svg>
+            </a>
+            <a href="https://linkedin.com" class="social-link" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.65 1.65 0 1 0 0-3.3 1.65 1.65 0 0 0 0 3.3m1.4 9.74V9.97H5.06v8.53h2.8z"/></svg>
+            </a>
+            <a href="https://t.me/wegevents" class="social-link" target="_blank" rel="noopener" aria-label="Telegram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Weg Events. All rights reserved.</p>
+        <div>
+          <a href="legal/privacy-policy.html" style="margin-right: 1.5rem;">Privacy Policy</a>
+          <a href="legal/terms-conditions.html">Terms &amp; Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="/js/main.js"></script>
+  <script src="/js/weg-animations.js"></script>
+  <!-- Back To Top -->
+  <button class="back-to-top-btn" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"></path></svg>
+  </button>
+</body>
+</html>

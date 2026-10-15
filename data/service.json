@@ -1,0 +1,20 @@
+{
+  "service_seo_title": "Our Services - WEG Events",
+  "service_seo_description": "Explore our bespoke event planning services: Wedding-Day Coordination, Full Wedding Management, Mels Day Planning, and Corporate Events.",
+  "service_hero_bg": "/images/ceremony.jpg",
+  "service_hero_eyebrow": "Bespoke Event Solutions",
+  "service_hero_headline": "Our Services",
+  "service_hero_subheadline": "From weddings to corporate events, we provide planning and coordination services that bring organization, care, and professionalism to every celebration.",
+  "service1_image": "/images/hosts.jpg",
+  "service1_badge": "Package 01",
+  "service1_title": "Wedding-Day Coordination",
+  "service2_image": "/images/table-decor.jpg",
+  "service2_badge": "Package 02 \u2022 Comprehensive",
+  "service2_title": "Full Wedding Management",
+  "service3_image": "/images/guest-book.jpg",
+  "service3_badge": "Package 03 \u2022 Cultural Heritage",
+  "service3_title": "Mels Day Planning",
+  "service4_image": "/images/name-tags.jpg",
+  "service4_badge": "Package 04 \u2022 Business & Gala",
+  "service4_title": "Corporate Events"
+}

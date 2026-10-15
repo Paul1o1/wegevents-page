@@ -18,7 +18,8 @@ content:
   # ----------------------------------------------------------
   - name: home
     label: "🏠 Home Page"
-    path: index.html
+    path: data/home.json
+    format: json
     type: file
     fields:
 
@@ -344,7 +345,8 @@ content:
   # ----------------------------------------------------------
   - name: about
     label: "ℹ️ About Us Page"
-    path: about.html
+    path: data/about.json
+    format: json
     type: file
     fields:
       - name: about_seo_title
@@ -424,7 +426,8 @@ content:
   # ----------------------------------------------------------
   - name: service
     label: "🛠️ Services Page"
-    path: service.html
+    path: data/service.json
+    format: json
     type: file
     fields:
       - name: service_seo_title
@@ -492,7 +495,8 @@ content:
   # ----------------------------------------------------------
   - name: process
     label: "⚙️ Our Process Page"
-    path: process.html
+    path: data/process.json
+    format: json
     type: file
     fields:
       - name: process_seo_title
@@ -542,7 +546,8 @@ content:
   # ----------------------------------------------------------
   - name: contact
     label: "📞 Contact Us Page"
-    path: contact.html
+    path: data/contact.json
+    format: json
     type: file
     fields:
       - name: contact_seo_title
@@ -577,7 +582,8 @@ content:
   # ----------------------------------------------------------
   - name: gallery
     label: "🖼️ Gallery Page"
-    path: gallery.html
+    path: data/gallery.json
+    format: json
     type: file
     fields:
       - name: gallery_seo_title
