@@ -329,19 +329,36 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       const formData = new FormData(contactForm);
+      const formPayload = {
+        name: formData.get('name') || '',
+        email: formData.get('email') || '',
+        phone: formData.get('phone') || '',
+        event_date: formData.get('event_date') || 'Not specified',
+        guest_count: formData.get('guest_count') || 'Not specified',
+        service: formData.get('service') || 'General Inquiry',
+        message: formData.get('message') || '',
+        _subject: `💍 New Wedding Inquiry: ${formData.get('name') || 'Client'} (${formData.get('service') || 'General'})`,
+        _template: 'table',
+        _captcha: 'false'
+      };
 
       try {
-        const response = await fetch('/api/contact.php', {
+        // Primary: FormSubmit guaranteed delivery to info@wegevents.et
+        const response = await fetch('https://formsubmit.co/ajax/info@wegevents.et', {
           method: 'POST',
-          body: formData,
           headers: {
+            'Content-Type': 'application/json',
             'Accept': 'application/json'
-          }
+          },
+          body: JSON.stringify(formPayload)
         });
+
+        // Background backup to local server
+        fetch('/api/contact.php', { method: 'POST', body: formData }).catch(() => {});
 
         const data = await response.json();
 
-        if (response.ok && data.status === 'success') {
+        if (response.ok && (data.success === 'true' || data.success === true)) {
           if (feedbackBox) {
             feedbackBox.style.display = 'block';
             feedbackBox.style.backgroundColor = 'rgba(91, 30, 40, 0.05)';
@@ -352,7 +369,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <span style="font-size: 1.4rem;">💍</span>
                 <div>
                   <h4 style="margin: 0 0 0.25rem 0; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.25rem; color: #5b1e28;">Inquiry Received With Care</h4>
-                  <p style="margin: 0; font-size: 0.95rem; line-height: 1.6;">${data.message || 'Thank you! We will review your celebration details and be in touch within 24 hours.'}</p>
+                  <p style="margin: 0; font-size: 0.95rem; line-height: 1.6;">Thank you, ${formPayload.name || 'there'}! We have safely received your celebration details. Our planning team will review them and contact you within 24 hours.</p>
                 </div>
               </div>
             `;
@@ -360,7 +377,7 @@ document.addEventListener('DOMContentLoaded', () => {
           }
           contactForm.reset();
         } else {
-          throw new Error(data.message || 'Unable to send message right now.');
+          throw new Error(data.message || 'Unable to deliver message right now.');
         }
       } catch (err) {
         if (feedbackBox) {
