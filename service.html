@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Our Services - WEG Events</title>
-  <meta name="description" content="Explore our bespoke event planning services: Wedding-Day Coordination, Full Wedding Management, Mels Day Planning, and Corporate Events.">
+  <title>{{ service_seo_title }}</title>
+  <meta name="description" content="{{ service_seo_description }}">
   <link rel="icon" href="/images/ftO8kifeghtEXTRrwjd3PQcrc.svg" type="image/svg+xml">
   
   <!-- Google Fonts -->
@@ -48,11 +48,11 @@
   </header>
 
   <!-- Page Hero -->
-  <section class="page-hero" style="background-image: url('/images/ceremony.jpg');">
+  <section class="page-hero" style="background-image: url('{{ service_hero_bg }}');">
     <div class="page-hero-content">
-      <p class="sub-heading" style="color: var(--weg-gold-light);">Bespoke Event Solutions</p>
-      <h1 class="heading-display">Our Services</h1>
-      <p>From weddings to corporate events, we provide planning and coordination services that bring organization, care, and professionalism to every celebration.</p>
+      <p class="sub-heading" style="color: var(--weg-gold-light);">{{ service_hero_eyebrow }}</p>
+      <h1 class="heading-display">{{ service_hero_headline }}</h1>
+      <p>{{ service_hero_subheadline }}</p>
     </div>
   </section>
 
@@ -63,11 +63,11 @@
       <!-- Service 1: Wedding-Day Coordination -->
       <div id="coordination" class="service-feature" data-framer-name="Service 01">
         <div class="service-img-wrap">
-          <img src="/images/hosts.jpg" alt="Wedding Day Coordination">
+          <img src="{{ service1_image }}" alt="{{ service1_title }}">
         </div>
         <div class="service-content">
-          <p class="sub-heading">Package 01</p>
-          <h3 class="heading-md">Wedding-Day Coordination</h3>
+          <p class="sub-heading">{{ service1_badge }}</p>
+          <h3 class="heading-md">{{ service1_title }}</h3>
           <p class="text-muted" style="font-size: 1.1rem; line-height: 1.7;">
             Designed for couples who have planned their celebration but desire seasoned professionals to ensure the big day runs flawlessly from start to finish.
           </p>
@@ -91,11 +91,11 @@
       <!-- Service 2: Full Wedding Management -->
       <div id="full-management" class="service-feature reverse" data-framer-name="Service 02">
         <div class="service-img-wrap">
-          <img src="/images/table-decor.jpg" alt="Full Wedding Management">
+          <img src="{{ service2_image }}" alt="{{ service2_title }}">
         </div>
         <div class="service-content">
-          <p class="sub-heading">Package 02 • Comprehensive</p>
-          <h3 class="heading-md">Full Wedding Management</h3>
+          <p class="sub-heading">{{ service2_badge }}</p>
+          <h3 class="heading-md">{{ service2_title }}</h3>
           <p class="text-muted" style="font-size: 1.1rem; line-height: 1.7;">
             From initial preparations to the last departing guest, we curate and manage every detail, providing total peace of mind.
           </p>
@@ -118,11 +118,11 @@
       <!-- Service 3: Mels Day Planning -->
       <div id="mels" class="service-feature" data-framer-name="Service 03">
         <div class="service-img-wrap">
-          <img src="/images/guest-book.jpg" alt="Mels Day Planning">
+          <img src="{{ service3_image }}" alt="{{ service3_title }}">
         </div>
         <div class="service-content">
-          <p class="sub-heading">Package 03 • Cultural Heritage</p>
-          <h3 class="heading-md">Mels Day Planning</h3>
+          <p class="sub-heading">{{ service3_badge }}</p>
+          <h3 class="heading-md">{{ service3_title }}</h3>
           <p class="text-muted" style="font-size: 1.1rem; line-height: 1.7;">
             Honoring traditional heritage and cultural richness with dedicated coordination, warm hospitality, and structured timelines.
           </p>
@@ -142,11 +142,11 @@
       <!-- Service 4: Corporate Events -->
       <div id="corporate" class="service-feature reverse" data-framer-name="Service 04">
         <div class="service-img-wrap">
-          <img src="/images/name-tags.jpg" alt="Corporate Events Planning">
+          <img src="{{ service4_image }}" alt="{{ service4_title }}">
         </div>
         <div class="service-content">
-          <p class="sub-heading">Package 04 • Business &amp; Gala</p>
-          <h3 class="heading-md">Corporate Events</h3>
+          <p class="sub-heading">{{ service4_badge }}</p>
+          <h3 class="heading-md">{{ service4_title }}</h3>
           <p class="text-muted" style="font-size: 1.1rem; line-height: 1.7;">
             High-level executive gatherings, product unveilings, and conferences orchestrated with precision and prestige.
           </p>

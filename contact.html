@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us - WEG Events</title>
-  <meta name="description" content="Get in touch with WEG Events to start planning your bespoke luxury wedding, cultural celebration, or corporate event.">
+  <title>{{ contact_seo_title }}</title>
+  <meta name="description" content="{{ contact_seo_description }}">
   <link rel="icon" href="/images/ftO8kifeghtEXTRrwjd3PQcrc.svg" type="image/svg+xml">
   
   <!-- Google Fonts -->
@@ -48,11 +48,11 @@
   </header>
 
   <!-- Page Hero -->
-  <section class="page-hero" style="background-image: url('/images/welcome-sign.jpg');">
+  <section class="page-hero" style="background-image: url('{{ contact_hero_bg }}');">
     <div class="page-hero-content">
-      <p class="sub-heading" style="color: var(--weg-gold-light);">Let's Connect</p>
-      <h1 class="heading-display">Your Celebration Begins Here</h1>
-      <p>We can’t wait to hear your story, understand your vision, and begin orchestrating your dream celebration.</p>
+      <p class="sub-heading" style="color: var(--weg-gold-light);">{{ contact_hero_eyebrow }}</p>
+      <h1 class="heading-display">{{ contact_hero_headline }}</h1>
+      <p>{{ contact_hero_subheadline }}</p>
     </div>
   </section>
 
@@ -64,8 +64,8 @@
         <!-- Left Burgundy Info Panel -->
         <div class="contact-info-panel">
           <div>
-            <p class="sub-heading" style="color: var(--weg-gold-light); margin-bottom: 0.5rem;">Direct Reach</p>
-            <h3>Get In Touch</h3>
+            <p class="sub-heading" style="color: var(--weg-gold-light); margin-bottom: 0.5rem;">{{ contact_panel_eyebrow }}</p>
+            <h3>{{ contact_panel_title }}</h3>
             <p style="opacity: 0.95; font-size: 1.1rem; line-height: 1.7; margin-bottom: 2rem;">
               Whether you are in the initial dream phase or ready to confirm a date, our team is here to guide you with care and professionalism.
             </p>

@@ -338,3 +338,443 @@ content:
       - name: footer_copyright
         label: "Footer — Copyright Line (e.g. © 2025 Weg Events. All rights reserved.)"
         type: string
+
+  # ----------------------------------------------------------
+  # 2. ABOUT US PAGE  (about.html)
+  # ----------------------------------------------------------
+  - name: about
+    label: "ℹ️ About Us Page"
+    path: about.html
+    type: file
+    fields:
+      - name: about_seo_title
+        label: "SEO — Browser Tab Title"
+        type: string
+      - name: about_seo_description
+        label: "SEO — Meta Description"
+        type: text
+
+      - name: about_hero_bg
+        label: "Hero — Background Image"
+        type: image
+      - name: about_hero_eyebrow
+        label: "Hero — Eyebrow Subtitle"
+        type: string
+      - name: about_hero_headline
+        label: "Hero — Main Headline"
+        type: string
+      - name: about_hero_subheadline
+        label: "Hero — Sub-headline Description"
+        type: text
+
+      - name: about_origin_eyebrow
+        label: "Story Origin — Eyebrow (e.g. The Origin)"
+        type: string
+      - name: about_origin_headline
+        label: "Story Origin — Headline"
+        type: string
+      - name: about_origin_image
+        label: "Story Origin — Founders Photo"
+        type: image
+
+      - name: about_mission_eyebrow
+        label: "Mission — Eyebrow"
+        type: string
+      - name: about_mission_title
+        label: "Mission — Title"
+        type: string
+
+      - name: about_vision_eyebrow
+        label: "Vision — Eyebrow"
+        type: string
+      - name: about_vision_title
+        label: "Vision — Title"
+        type: string
+
+      - name: about_team_headline
+        label: "Team Section — Headline"
+        type: string
+
+      - name: about_team1_image
+        label: "Team Member 1 — Photo"
+        type: image
+      - name: about_team1_name
+        label: "Team Member 1 — Name"
+        type: string
+      - name: about_team1_role
+        label: "Team Member 1 — Role"
+        type: string
+
+      - name: about_team2_image
+        label: "Team Member 2 — Photo"
+        type: image
+      - name: about_team2_name
+        label: "Team Member 2 — Name"
+        type: string
+
+      - name: about_team3_image
+        label: "Team Member 3 — Photo"
+        type: image
+      - name: about_team3_name
+        label: "Team Member 3 — Name"
+        type: string
+
+  # ----------------------------------------------------------
+  # 3. SERVICES PAGE  (service.html)
+  # ----------------------------------------------------------
+  - name: service
+    label: "🛠️ Services Page"
+    path: service.html
+    type: file
+    fields:
+      - name: service_seo_title
+        label: "SEO — Browser Tab Title"
+        type: string
+      - name: service_seo_description
+        label: "SEO — Meta Description"
+        type: text
+
+      - name: service_hero_bg
+        label: "Hero — Background Image"
+        type: image
+      - name: service_hero_eyebrow
+        label: "Hero — Eyebrow Subtitle"
+        type: string
+      - name: service_hero_headline
+        label: "Hero — Main Headline"
+        type: string
+      - name: service_hero_subheadline
+        label: "Hero — Sub-headline Description"
+        type: text
+
+      - name: service1_image
+        label: "Package 1 — Photo"
+        type: image
+      - name: service1_badge
+        label: "Package 1 — Badge (e.g. Package 01)"
+        type: string
+      - name: service1_title
+        label: "Package 1 — Package Name"
+        type: string
+
+      - name: service2_image
+        label: "Package 2 — Photo"
+        type: image
+      - name: service2_badge
+        label: "Package 2 — Badge"
+        type: string
+      - name: service2_title
+        label: "Package 2 — Package Name"
+        type: string
+
+      - name: service3_image
+        label: "Package 3 — Photo"
+        type: image
+      - name: service3_badge
+        label: "Package 3 — Badge"
+        type: string
+      - name: service3_title
+        label: "Package 3 — Package Name"
+        type: string
+
+      - name: service4_image
+        label: "Package 4 — Photo"
+        type: image
+      - name: service4_badge
+        label: "Package 4 — Badge"
+        type: string
+      - name: service4_title
+        label: "Package 4 — Package Name"
+        type: string
+
+  # ----------------------------------------------------------
+  # 4. PROCESS PAGE  (process.html)
+  # ----------------------------------------------------------
+  - name: process
+    label: "⚙️ Our Process Page"
+    path: process.html
+    type: file
+    fields:
+      - name: process_seo_title
+        label: "SEO — Browser Tab Title"
+        type: string
+      - name: process_seo_description
+        label: "SEO — Meta Description"
+        type: text
+
+      - name: process_hero_bg
+        label: "Hero — Background Image"
+        type: image
+      - name: process_hero_eyebrow
+        label: "Hero — Eyebrow Subtitle"
+        type: string
+      - name: process_hero_headline
+        label: "Hero — Main Headline"
+        type: string
+      - name: process_hero_subheadline
+        label: "Hero — Sub-headline Description"
+        type: text
+
+      - name: process_section_eyebrow
+        label: "Steps Section — Eyebrow"
+        type: string
+      - name: process_section_headline
+        label: "Steps Section — Headline"
+        type: string
+      - name: process_section_intro
+        label: "Steps Section — Intro Text"
+        type: text
+
+      - name: process_step1_title
+        label: "Step 1 — Title (e.g. Initial Inquiry)"
+        type: string
+
+      - name: process_step2_title
+        label: "Step 2 — Title (e.g. Review Our Packages)"
+        type: string
+
+      - name: process_step3_title
+        label: "Step 3 — Title (e.g. Booking & Execution)"
+        type: string
+
+  # ----------------------------------------------------------
+  # 5. CONTACT PAGE  (contact.html)
+  # ----------------------------------------------------------
+  - name: contact
+    label: "📞 Contact Us Page"
+    path: contact.html
+    type: file
+    fields:
+      - name: contact_seo_title
+        label: "SEO — Browser Tab Title"
+        type: string
+      - name: contact_seo_description
+        label: "SEO — Meta Description"
+        type: text
+
+      - name: contact_hero_bg
+        label: "Hero — Background Image"
+        type: image
+      - name: contact_hero_eyebrow
+        label: "Hero — Eyebrow Subtitle"
+        type: string
+      - name: contact_hero_headline
+        label: "Hero — Main Headline"
+        type: string
+      - name: contact_hero_subheadline
+        label: "Hero — Sub-headline Description"
+        type: text
+
+      - name: contact_panel_eyebrow
+        label: "Info Box — Eyebrow (e.g. Direct Reach)"
+        type: string
+      - name: contact_panel_title
+        label: "Info Box — Title (e.g. Get In Touch)"
+        type: string
+
+  # ----------------------------------------------------------
+  # 6. GALLERY PAGE  (gallery.html)
+  # ----------------------------------------------------------
+  - name: gallery
+    label: "🖼️ Gallery Page"
+    path: gallery.html
+    type: file
+    fields:
+      - name: gallery_seo_title
+        label: "SEO — Browser Tab Title"
+        type: string
+      - name: gallery_seo_description
+        label: "SEO — Meta Description"
+        type: text
+
+      - name: gallery_hero_eyebrow
+        label: "Hero — Eyebrow Subtitle"
+        type: string
+      - name: gallery_hero_headline
+        label: "Hero — Main Headline"
+        type: string
+      - name: gallery_hero_subheadline
+        label: "Hero — Sub-headline Description"
+        type: text
+
+      - name: gallery_card1_image
+        label: "Gallery Card 1 — Photo"
+        type: image
+      - name: gallery_card1_category
+        label: "Gallery Card 1 — Category Tag"
+        type: string
+      - name: gallery_card1_title
+        label: "Gallery Card 1 — Couple / Event Title"
+        type: string
+      - name: gallery_card1_desc
+        label: "Gallery Card 1 — Description"
+        type: text
+
+      - name: gallery_card2_image
+        label: "Gallery Card 2 — Photo"
+        type: image
+      - name: gallery_card2_category
+        label: "Gallery Card 2 — Category Tag"
+        type: string
+      - name: gallery_card2_title
+        label: "Gallery Card 2 — Couple / Event Title"
+        type: string
+      - name: gallery_card2_desc
+        label: "Gallery Card 2 — Description"
+        type: text
+
+      - name: gallery_card3_image
+        label: "Gallery Card 3 — Photo"
+        type: image
+      - name: gallery_card3_category
+        label: "Gallery Card 3 — Category Tag"
+        type: string
+      - name: gallery_card3_title
+        label: "Gallery Card 3 — Couple / Event Title"
+        type: string
+      - name: gallery_card3_desc
+        label: "Gallery Card 3 — Description"
+        type: text
+
+      - name: gallery_card4_image
+        label: "Gallery Card 4 — Photo"
+        type: image
+      - name: gallery_card4_category
+        label: "Gallery Card 4 — Category Tag"
+        type: string
+      - name: gallery_card4_title
+        label: "Gallery Card 4 — Couple / Event Title"
+        type: string
+      - name: gallery_card4_desc
+        label: "Gallery Card 4 — Description"
+        type: text
+
+      - name: gallery_card5_image
+        label: "Gallery Card 5 — Photo"
+        type: image
+      - name: gallery_card5_category
+        label: "Gallery Card 5 — Category Tag"
+        type: string
+      - name: gallery_card5_title
+        label: "Gallery Card 5 — Couple / Event Title"
+        type: string
+      - name: gallery_card5_desc
+        label: "Gallery Card 5 — Description"
+        type: text
+
+      - name: gallery_card6_image
+        label: "Gallery Card 6 — Photo"
+        type: image
+      - name: gallery_card6_category
+        label: "Gallery Card 6 — Category Tag"
+        type: string
+      - name: gallery_card6_title
+        label: "Gallery Card 6 — Couple / Event Title"
+        type: string
+      - name: gallery_card6_desc
+        label: "Gallery Card 6 — Description"
+        type: text
+
+      - name: gallery_card7_image
+        label: "Gallery Card 7 — Photo"
+        type: image
+      - name: gallery_card7_category
+        label: "Gallery Card 7 — Category Tag"
+        type: string
+      - name: gallery_card7_title
+        label: "Gallery Card 7 — Couple / Event Title"
+        type: string
+      - name: gallery_card7_desc
+        label: "Gallery Card 7 — Description"
+        type: text
+
+      - name: gallery_card8_image
+        label: "Gallery Card 8 — Photo"
+        type: image
+      - name: gallery_card8_category
+        label: "Gallery Card 8 — Category Tag"
+        type: string
+      - name: gallery_card8_title
+        label: "Gallery Card 8 — Couple / Event Title"
+        type: string
+      - name: gallery_card8_desc
+        label: "Gallery Card 8 — Description"
+        type: text
+
+      - name: gallery_card9_image
+        label: "Gallery Card 9 — Photo"
+        type: image
+      - name: gallery_card9_category
+        label: "Gallery Card 9 — Category Tag"
+        type: string
+      - name: gallery_card9_title
+        label: "Gallery Card 9 — Couple / Event Title"
+        type: string
+      - name: gallery_card9_desc
+        label: "Gallery Card 9 — Description"
+        type: text
+
+      - name: gallery_card10_image
+        label: "Gallery Card 10 — Photo"
+        type: image
+      - name: gallery_card10_category
+        label: "Gallery Card 10 — Category Tag"
+        type: string
+      - name: gallery_card10_title
+        label: "Gallery Card 10 — Couple / Event Title"
+        type: string
+      - name: gallery_card10_desc
+        label: "Gallery Card 10 — Description"
+        type: text
+
+      - name: gallery_card11_image
+        label: "Gallery Card 11 — Photo"
+        type: image
+      - name: gallery_card11_category
+        label: "Gallery Card 11 — Category Tag"
+        type: string
+      - name: gallery_card11_title
+        label: "Gallery Card 11 — Couple / Event Title"
+        type: string
+      - name: gallery_card11_desc
+        label: "Gallery Card 11 — Description"
+        type: text
+
+      - name: gallery_card12_image
+        label: "Gallery Card 12 — Photo"
+        type: image
+      - name: gallery_card12_category
+        label: "Gallery Card 12 — Category Tag"
+        type: string
+      - name: gallery_card12_title
+        label: "Gallery Card 12 — Couple / Event Title"
+        type: string
+      - name: gallery_card12_desc
+        label: "Gallery Card 12 — Description"
+        type: text
+
+      - name: gallery_card13_image
+        label: "Gallery Card 13 — Photo"
+        type: image
+      - name: gallery_card13_category
+        label: "Gallery Card 13 — Category Tag"
+        type: string
+      - name: gallery_card13_title
+        label: "Gallery Card 13 — Couple / Event Title"
+        type: string
+      - name: gallery_card13_desc
+        label: "Gallery Card 13 — Description"
+        type: text
+
+      - name: gallery_card14_image
+        label: "Gallery Card 14 — Photo"
+        type: image
+      - name: gallery_card14_category
+        label: "Gallery Card 14 — Category Tag"
+        type: string
+      - name: gallery_card14_title
+        label: "Gallery Card 14 — Couple / Event Title"
+        type: string
+      - name: gallery_card14_desc
+        label: "Gallery Card 14 — Description"
+        type: text
