@@ -74,10 +74,14 @@ content:
     type: collection
     path: content/blog
     format: json
-    filename: "{fields.slug}"
+    filename: "{fields.slug}.json"
     view:
       primary: title
       fields: [title, category, date]
+      sort: [date]
+      default:
+        sort: date
+        order: desc
     fields:
       - name: title
         label: "Post Title"
