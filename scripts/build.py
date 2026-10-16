@@ -216,10 +216,70 @@ for tmpl_path, json_path, out_path in mappings:
         f.write(html)
     print(f"Compiled {out_path}")
 
+def render_markdown(text):
+    if not text:
+        return ""
+    if "<" in text and ">" in text and ("<p>" in text or "<h2>" in text or "<h3>" in text):
+        return text  # Already formatted HTML
+    
+    lines = text.split("\n")
+    html_parts = []
+    in_list = False
+    
+    for line in lines:
+        stripped = line.strip()
+        if not stripped:
+            if in_list:
+                html_parts.append("</ul>")
+                in_list = False
+            continue
+        
+        # Heading 3
+        if stripped.startswith("### "):
+            if in_list:
+                html_parts.append("</ul>")
+                in_list = False
+            h_text = stripped[4:]
+            html_parts.append(f'<h3 class="heading-sm" style="margin-top: 1.75rem; margin-bottom: 0.75rem; color: var(--weg-text-dark);">{h_text}</h3>')
+        # Heading 2
+        elif stripped.startswith("## "):
+            if in_list:
+                html_parts.append("</ul>")
+                in_list = False
+            h_text = stripped[3:]
+            html_parts.append(f'<h2 class="heading-md" style="margin-top: 2.25rem; margin-bottom: 1rem; color: var(--weg-text-dark);">{h_text}</h2>')
+        # Heading 1
+        elif stripped.startswith("# "):
+            if in_list:
+                html_parts.append("</ul>")
+                in_list = False
+            h_text = stripped[2:]
+            html_parts.append(f'<h2 class="heading-md" style="margin-top: 2.25rem; margin-bottom: 1rem; color: var(--weg-text-dark);">{h_text}</h2>')
+        # List items
+        elif stripped.startswith("- ") or stripped.startswith("* "):
+            if not in_list:
+                html_parts.append('<ul style="margin-bottom: 1.5rem; padding-left: 1.5rem; line-height: 1.8;">')
+                in_list = True
+            li_text = stripped[2:]
+            li_text = re.sub(r'\*\*(.*?)\*\*', r'<strong>\1</strong>', li_text)
+            html_parts.append(f'<li style="margin-bottom: 0.5rem;">{li_text}</li>')
+        else:
+            if in_list:
+                html_parts.append("</ul>")
+                in_list = False
+            p_text = re.sub(r'\*\*(.*?)\*\*', r'<strong>\1</strong>', stripped)
+            p_text = re.sub(r'\*(.*?)\*', r'<em>\1</em>', p_text)
+            html_parts.append(f'<p style="margin-bottom: 1.5rem; line-height: 1.8;">{p_text}</p>')
+            
+    if in_list:
+        html_parts.append("</ul>")
+        
+    return "\n".join(html_parts)
+
 # ============================================================
 # BLOG COMPILATION (Posts Collection + Main Listing)
 # ============================================================
-import glob
+import glob, subprocess
 
 blog_posts = []
 blog_files = glob.glob('content/blog/*.json')
@@ -229,12 +289,24 @@ for fpath in blog_files:
             post_data = json.load(f)
             if not post_data.get('slug'):
                 post_data['slug'] = os.path.splitext(os.path.basename(fpath))[0]
+            
+            # Timestamp tie-breakers when multiple posts have the same date
+            git_time = 0
+            try:
+                out = subprocess.check_output(['git', 'log', '-1', '--format=%ct', fpath], stderr=subprocess.DEVNULL).decode().strip()
+                if out.isdigit():
+                    git_time = int(out)
+            except Exception:
+                pass
+            post_data['_git_time'] = git_time
+            post_data['_mtime'] = os.path.getmtime(fpath) if os.path.exists(fpath) else 0
+
             blog_posts.append(post_data)
     except Exception as e:
         print(f"⚠️ Error reading blog post {fpath}: {e}")
 
-# Sort newest first by date (YYYY-MM-DD)
-blog_posts.sort(key=lambda p: str(p.get('date', '')), reverse=True)
+# Sort newest first: primary by date (YYYY-MM-DD), secondary by commit timestamp, tertiary by file mtime
+blog_posts.sort(key=lambda p: (str(p.get('date', '')), p.get('_git_time', 0), p.get('_mtime', 0)), reverse=True)
 
 # 1. Compile Main Blog Page (blog.html and blog/index.html)
 if os.path.exists('templates/blog.html'):
@@ -280,12 +352,9 @@ if os.path.exists('templates/blog-post.html'):
         post_data.update(post)
         post_data['formatted_date'] = format_post_date(post.get('date', ''))
 
-        # Prepare content paragraphs if raw string
+        # Prepare content: render markdown or preserve rich HTML
         body_content = post.get('content', '')
-        if body_content and not ('<' in body_content and '>' in body_content):
-            # Wrap plain text lines in paragraphs
-            paragraphs = [p.strip() for p in body_content.split('\n\n') if p.strip()]
-            post_data['content'] = ''.join([f'<p style="margin-bottom: 1.5rem;">{p}</p>' for p in paragraphs])
+        post_data['content'] = render_markdown(body_content)
 
         out_html = post_template
         for key, val in post_data.items():
