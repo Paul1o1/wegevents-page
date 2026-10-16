@@ -89,10 +89,10 @@ content:
         required: true
 
       - name: slug
-        label: "URL Slug (e.g. creating-a-smooth-wedding-timeline)"
+        label: "URL Slug (e.g. seamless-wedding-timeline — unique name without spaces)"
         type: string
         required: true
-        description: "Appears in URL: /blog/your-slug"
+        description: "Creates clean link: wegevents.et/blog/your-slug. Must be a unique name for each new post."
 
       - name: date
         label: "Publication Date (e.g. 2025-10-16)"
