@@ -14,6 +14,59 @@ media: images
 content:
 
   # ----------------------------------------------------------
+  # 0. GLOBAL SETTINGS — Contact Info & Social Media Links
+  # ----------------------------------------------------------
+  - name: settings
+    label: "⚙️ Global Settings"
+    path: data/settings.json
+    format: json
+    type: file
+    fields:
+
+      # ── CONTACT INFORMATION ─────────────────────────────────
+      - name: company_email
+        label: "Contact — Email Address (e.g. info@wegevents.et)"
+        type: string
+
+      - name: company_phone
+        label: "Contact — Phone Number (displayed, e.g. +251 954 920 010)"
+        type: string
+
+      - name: company_phone_tel
+        label: "Contact — Phone for tel: link (no spaces, e.g. +251954920010)"
+        type: string
+
+      - name: company_location
+        label: "Contact — City & Country (e.g. Addis Ababa, Ethiopia)"
+        type: string
+
+      - name: company_location_subtext
+        label: "Contact — Location Sub-text (e.g. Available for destination celebrations worldwide)"
+        type: string
+
+      # ── SOCIAL MEDIA LINKS ──────────────────────────────────
+      - name: instagram_url
+        label: "Social — Instagram URL (e.g. https://instagram.com/wegevents)"
+        type: string
+
+      - name: tiktok_url
+        label: "Social — TikTok URL (e.g. https://tiktok.com/@wegevents)"
+        type: string
+
+      - name: linkedin_url
+        label: "Social — LinkedIn URL"
+        type: string
+
+      - name: telegram_url
+        label: "Social — Telegram URL (e.g. https://t.me/wegevents)"
+        type: string
+
+      # ── FOOTER ──────────────────────────────────────────────
+      - name: footer_copyright
+        label: "Footer — Copyright Text (e.g. © 2025 WEG Events. All rights reserved.)"
+        type: string
+
+  # ----------------------------------------------------------
   # 1. HOME PAGE  (index.html)
   # ----------------------------------------------------------
   - name: home
@@ -584,5 +637,9 @@ content:
             label: "Story Link (e.g. contact.html or /case-study/story-name.html)"
             type: string
           - name: button_text
-            label: "Button Text (e.g. Read Story or Inquire For Details)"
+            label: "Button Text (e.g. View Gallery)"
             type: string
+          - name: photos
+            label: "Celebration Photos (9 Photos for 3x3 Grid)"
+            type: image
+            list: true

@@ -11,7 +11,18 @@
       "title": "Clara & James",
       "description": "A romantic celebration blending modern European elegance with warm Ethiopian hospitality at Hyatt Regency.",
       "link": "/case-study/clara-james.html",
-      "button_text": "Read Story"
+      "button_text": "View Gallery",
+      "photos": [
+        "/images/hosts.jpg",
+        "/images/table-decor.jpg",
+        "/images/ceremony.jpg",
+        "/images/guest-book.jpg",
+        "/images/DSC_9662_result (1).jpg",
+        "/images/_DSC8465_result (1).jpg",
+        "/images/SAM07611_result (1).jpg",
+        "/images/DSC_9667_result (1).jpg",
+        "/images/SAM07618_result (1).jpg"
+      ]
     },
     {
       "image": "/images/table-decor.jpg",
@@ -19,7 +30,18 @@
       "title": "Mei & Thomas",
       "description": "An intimate candlelit reception with bespoke florals and impeccable multi-course timing at Ethiopian Skylight Hotel.",
       "link": "/case-study/mei-thomas.html",
-      "button_text": "Read Story"
+      "button_text": "View Gallery",
+      "photos": [
+        "/images/table-decor.jpg",
+        "/images/ceremony.jpg",
+        "/images/guest-book.jpg",
+        "/images/DSC_9662_result (1).jpg",
+        "/images/_DSC8465_result (1).jpg",
+        "/images/SAM07611_result (1).jpg",
+        "/images/DSC_9667_result (1).jpg",
+        "/images/SAM07618_result (1).jpg",
+        "/images/welcome-sign.jpg"
+      ]
     },
     {
       "image": "/images/ceremony.jpg",
@@ -27,7 +49,18 @@
       "title": "Sofia & Luca",
       "description": "A breathtaking open-air lakeside ceremony featuring organic botanical installations and scenic vistas at Kuriftu Resort.",
       "link": "/case-study/sofia-luca.html",
-      "button_text": "Read Story"
+      "button_text": "View Gallery",
+      "photos": [
+        "/images/ceremony.jpg",
+        "/images/guest-book.jpg",
+        "/images/DSC_9662_result (1).jpg",
+        "/images/_DSC8465_result (1).jpg",
+        "/images/SAM07611_result (1).jpg",
+        "/images/DSC_9667_result (1).jpg",
+        "/images/SAM07618_result (1).jpg",
+        "/images/welcome-sign.jpg",
+        "/images/name-tags.jpg"
+      ]
     },
     {
       "image": "/images/guest-book.jpg",
@@ -35,7 +68,18 @@
       "title": "True Moments",
       "description": "Honoring cultural roots with vibrant traditional decor, ceremonial attire, and flawlessly choreographed guest flow.",
       "link": "/case-study/true-moments.html",
-      "button_text": "Read Story"
+      "button_text": "View Gallery",
+      "photos": [
+        "/images/guest-book.jpg",
+        "/images/DSC_9662_result (1).jpg",
+        "/images/_DSC8465_result (1).jpg",
+        "/images/SAM07611_result (1).jpg",
+        "/images/DSC_9667_result (1).jpg",
+        "/images/SAM07618_result (1).jpg",
+        "/images/welcome-sign.jpg",
+        "/images/name-tags.jpg",
+        "/images/AGE_1848_result (1).jpg"
+      ]
     },
     {
       "image": "/images/DSC_9662_result (1).jpg",
@@ -43,7 +87,18 @@
       "title": "Bethlehem & Nahom",
       "description": "An opulent ballroom celebration in Addis Ababa with refined floral arches, personalized guest favors, and seamless coordination.",
       "link": "contact.html",
-      "button_text": "Inquire For Details"
+      "button_text": "View Gallery",
+      "photos": [
+        "/images/DSC_9662_result (1).jpg",
+        "/images/_DSC8465_result (1).jpg",
+        "/images/SAM07611_result (1).jpg",
+        "/images/DSC_9667_result (1).jpg",
+        "/images/SAM07618_result (1).jpg",
+        "/images/welcome-sign.jpg",
+        "/images/name-tags.jpg",
+        "/images/AGE_1848_result (1).jpg",
+        "/images/Iuk4OTaPTNivnJ1jsGJAc07sws.jpg"
+      ]
     },
     {
       "image": "/images/_DSC8465_result (1).jpg",
@@ -51,7 +106,18 @@
       "title": "Faysel & Cece",
       "description": "A high-energy, joy-filled celebration at Bole Luxury Pavilion with precision timeline execution and stage management.",
       "link": "contact.html",
-      "button_text": "Inquire For Details"
+      "button_text": "View Gallery",
+      "photos": [
+        "/images/_DSC8465_result (1).jpg",
+        "/images/SAM07611_result (1).jpg",
+        "/images/DSC_9667_result (1).jpg",
+        "/images/SAM07618_result (1).jpg",
+        "/images/welcome-sign.jpg",
+        "/images/name-tags.jpg",
+        "/images/AGE_1848_result (1).jpg",
+        "/images/Iuk4OTaPTNivnJ1jsGJAc07sws.jpg",
+        "/images/hosts.jpg"
+      ]
     },
     {
       "image": "/images/SAM07611_result (1).jpg",
@@ -59,7 +125,18 @@
       "title": "Rekik & Nahom",
       "description": "A serene open-air garden celebration at Sheraton Addis, featuring delicate pastel blooms and stress-free hospitality.",
       "link": "contact.html",
-      "button_text": "Inquire For Details"
+      "button_text": "View Gallery",
+      "photos": [
+        "/images/SAM07611_result (1).jpg",
+        "/images/DSC_9667_result (1).jpg",
+        "/images/SAM07618_result (1).jpg",
+        "/images/welcome-sign.jpg",
+        "/images/name-tags.jpg",
+        "/images/AGE_1848_result (1).jpg",
+        "/images/Iuk4OTaPTNivnJ1jsGJAc07sws.jpg",
+        "/images/hosts.jpg",
+        "/images/table-decor.jpg"
+      ]
     },
     {
       "image": "/images/DSC_9667_result (1).jpg",
@@ -67,7 +144,18 @@
       "title": "Elena & Dawit",
       "description": "A picturesque destination gathering overlooking Lake Hawassa at Haile Resort, marrying lakeside romance with bespoke styling.",
       "link": "contact.html",
-      "button_text": "Inquire For Details"
+      "button_text": "View Gallery",
+      "photos": [
+        "/images/DSC_9667_result (1).jpg",
+        "/images/SAM07618_result (1).jpg",
+        "/images/welcome-sign.jpg",
+        "/images/name-tags.jpg",
+        "/images/AGE_1848_result (1).jpg",
+        "/images/Iuk4OTaPTNivnJ1jsGJAc07sws.jpg",
+        "/images/hosts.jpg",
+        "/images/table-decor.jpg",
+        "/images/ceremony.jpg"
+      ]
     },
     {
       "image": "/images/SAM07618_result (1).jpg",
@@ -75,7 +163,18 @@
       "title": "Selam & Michael",
       "description": "An elevated forest sanctuary celebration at Entoto Park, complete with custom botanical installations and ambient lighting.",
       "link": "contact.html",
-      "button_text": "Inquire For Details"
+      "button_text": "View Gallery",
+      "photos": [
+        "/images/SAM07618_result (1).jpg",
+        "/images/welcome-sign.jpg",
+        "/images/name-tags.jpg",
+        "/images/AGE_1848_result (1).jpg",
+        "/images/Iuk4OTaPTNivnJ1jsGJAc07sws.jpg",
+        "/images/hosts.jpg",
+        "/images/table-decor.jpg",
+        "/images/ceremony.jpg",
+        "/images/guest-book.jpg"
+      ]
     },
     {
       "image": "/images/welcome-sign.jpg",
@@ -83,7 +182,18 @@
       "title": "Tigist & Brook",
       "description": "A culturally rich Mels day celebrating heritage, traditional music, and joyful family gatherings with flawless timing.",
       "link": "contact.html",
-      "button_text": "Inquire For Details"
+      "button_text": "View Gallery",
+      "photos": [
+        "/images/welcome-sign.jpg",
+        "/images/name-tags.jpg",
+        "/images/AGE_1848_result (1).jpg",
+        "/images/Iuk4OTaPTNivnJ1jsGJAc07sws.jpg",
+        "/images/hosts.jpg",
+        "/images/table-decor.jpg",
+        "/images/ceremony.jpg",
+        "/images/guest-book.jpg",
+        "/images/DSC_9662_result (1).jpg"
+      ]
     },
     {
       "image": "/images/name-tags.jpg",
@@ -91,7 +201,18 @@
       "title": "Hanna & Yared",
       "description": "Sophisticated modern reception at Addis Grand, curated with bespoke calligraphy name tags, gold cutlery, and floral arches.",
       "link": "contact.html",
-      "button_text": "Inquire For Details"
+      "button_text": "View Gallery",
+      "photos": [
+        "/images/name-tags.jpg",
+        "/images/AGE_1848_result (1).jpg",
+        "/images/Iuk4OTaPTNivnJ1jsGJAc07sws.jpg",
+        "/images/hosts.jpg",
+        "/images/table-decor.jpg",
+        "/images/ceremony.jpg",
+        "/images/guest-book.jpg",
+        "/images/DSC_9662_result (1).jpg",
+        "/images/_DSC8465_result (1).jpg"
+      ]
     },
     {
       "image": "/images/AGE_1848_result (1).jpg",
@@ -99,7 +220,18 @@
       "title": "Executive Book Launch & Gala",
       "description": "A prestigious literary unveil and corporate reception at Skylight Hall, coordinating media, dignitary protocols, and keynote staging.",
       "link": "contact.html",
-      "button_text": "Inquire For Details"
+      "button_text": "View Gallery",
+      "photos": [
+        "/images/AGE_1848_result (1).jpg",
+        "/images/Iuk4OTaPTNivnJ1jsGJAc07sws.jpg",
+        "/images/hosts.jpg",
+        "/images/table-decor.jpg",
+        "/images/ceremony.jpg",
+        "/images/guest-book.jpg",
+        "/images/DSC_9662_result (1).jpg",
+        "/images/_DSC8465_result (1).jpg",
+        "/images/SAM07611_result (1).jpg"
+      ]
     },
     {
       "image": "/images/hosts.jpg",
@@ -107,7 +239,18 @@
       "title": "Lydia & Samuel",
       "description": "An intimate lakeside gathering at Bishoftu Lake with customized sunset dining and heartfelt personal touches throughout.",
       "link": "contact.html",
-      "button_text": "Inquire For Details"
+      "button_text": "View Gallery",
+      "photos": [
+        "/images/hosts.jpg",
+        "/images/Iuk4OTaPTNivnJ1jsGJAc07sws.jpg",
+        "/images/table-decor.jpg",
+        "/images/ceremony.jpg",
+        "/images/guest-book.jpg",
+        "/images/DSC_9662_result (1).jpg",
+        "/images/_DSC8465_result (1).jpg",
+        "/images/SAM07611_result (1).jpg",
+        "/images/DSC_9667_result (1).jpg"
+      ]
     },
     {
       "image": "/images/ceremony.jpg",
@@ -115,7 +258,18 @@
       "title": "Maya & Kirubel",
       "description": "A chic Addis Ababa wedding blending contemporary styling with warm communal celebration and unforgettable music.",
       "link": "contact.html",
-      "button_text": "Inquire For Details"
+      "button_text": "View Gallery",
+      "photos": [
+        "/images/ceremony.jpg",
+        "/images/hosts.jpg",
+        "/images/table-decor.jpg",
+        "/images/guest-book.jpg",
+        "/images/DSC_9662_result (1).jpg",
+        "/images/_DSC8465_result (1).jpg",
+        "/images/SAM07611_result (1).jpg",
+        "/images/DSC_9667_result (1).jpg",
+        "/images/SAM07618_result (1).jpg"
+      ]
     }
   ]
 }

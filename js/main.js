@@ -124,43 +124,150 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 
-  // 8. Gallery Lightbox Modal
-  const lightbox = document.getElementById('weg-lightbox');
-  const lightboxImg = document.getElementById('weg-lightbox-img');
-  const lightboxCaption = document.getElementById('weg-lightbox-caption');
-  const lightboxClose = document.getElementById('weg-lightbox-close');
+  // 8. Couple 3x3 Gallery Modal & Fullscreen Photo Viewer
+  const coupleModal = document.getElementById('weg-couple-gallery-modal');
+  const cgmClose = document.getElementById('cgm-close');
+  const cgmCloseBtn = document.getElementById('cgm-close-btn');
+  const cgmBackdrop = document.getElementById('cgm-backdrop');
+  const cgmTitle = document.getElementById('cgm-title');
+  const cgmCategory = document.getElementById('cgm-category');
+  const cgmDesc = document.getElementById('cgm-desc');
+  const cgmGrid = document.getElementById('cgm-grid');
 
-  if (lightbox && lightboxImg) {
-    document.querySelectorAll('.gallery-card, [data-gallery-img]').forEach(card => {
-      card.addEventListener('click', () => {
-        const img = card.querySelector('img');
-        const couple = card.querySelector('.gallery-couple');
-        const date = card.querySelector('.gallery-date');
-        if (img) {
-          lightboxImg.src = img.src;
-          if (lightboxCaption) {
-            let cap = '';
-            if (couple) cap += couple.textContent;
-            if (date) cap += ' • ' + date.textContent;
-            lightboxCaption.textContent = cap;
-          }
-          lightbox.classList.add('active');
+  const fsLightbox = document.getElementById('weg-fullscreen-lightbox');
+  const fsClose = document.getElementById('fs-close');
+  const fsPrev = document.getElementById('fs-prev');
+  const fsNext = document.getElementById('fs-next');
+  const fsImg = document.getElementById('fs-img');
+  const fsCaption = document.getElementById('fs-caption');
+
+  let currentPhotos = [];
+  let currentPhotoIdx = 0;
+  let currentCoupleTitle = '';
+
+  function closeCoupleModal() {
+    if (coupleModal) {
+      coupleModal.classList.remove('active');
+      coupleModal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+  }
+
+  function openCoupleModal(title, category, desc, photos) {
+    if (!coupleModal || !cgmGrid) return;
+    currentPhotos = photos || [];
+    currentCoupleTitle = title || 'Celebration Gallery';
+    
+    if (cgmTitle) cgmTitle.textContent = title;
+    if (cgmCategory) cgmCategory.textContent = category;
+    if (cgmDesc) cgmDesc.textContent = desc;
+
+    // Render 3x3 photo grid
+    cgmGrid.innerHTML = '';
+    currentPhotos.forEach((src, idx) => {
+      const cell = document.createElement('div');
+      cell.className = 'couple-photo-cell';
+      cell.setAttribute('role', 'button');
+      cell.setAttribute('tabindex', '0');
+      cell.setAttribute('aria-label', `${title} - Photo ${idx + 1}`);
+      cell.innerHTML = `
+        <img src="${src}" alt="${title} photo ${idx + 1}" loading="lazy">
+        <div class="couple-photo-overlay">
+          <span>Enlarge</span>
+        </div>
+      `;
+      cell.addEventListener('click', () => openFsLightbox(idx));
+      cell.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          openFsLightbox(idx);
         }
       });
+      cgmGrid.appendChild(cell);
     });
 
-    if (lightboxClose) {
-      lightboxClose.addEventListener('click', () => {
-        lightbox.classList.remove('active');
-      });
-    }
+    coupleModal.classList.add('active');
+    coupleModal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
 
-    lightbox.addEventListener('click', (e) => {
-      if (e.target === lightbox) {
-        lightbox.classList.remove('active');
+  function openFsLightbox(idx) {
+    if (!fsLightbox || !fsImg || currentPhotos.length === 0) return;
+    currentPhotoIdx = (idx + currentPhotos.length) % currentPhotos.length;
+    fsImg.src = currentPhotos[currentPhotoIdx];
+    if (fsCaption) {
+      fsCaption.textContent = `${currentCoupleTitle} • Photo ${currentPhotoIdx + 1} of ${currentPhotos.length}`;
+    }
+    fsLightbox.classList.add('active');
+    fsLightbox.setAttribute('aria-hidden', 'false');
+  }
+
+  function closeFsLightbox() {
+    if (fsLightbox) {
+      fsLightbox.classList.remove('active');
+      fsLightbox.setAttribute('aria-hidden', 'true');
+    }
+  }
+
+  // Attach triggers for gallery cards & buttons
+  document.addEventListener('click', (e) => {
+    const trigger = e.target.closest('[data-action="open-couple-gallery"]');
+    if (trigger) {
+      e.preventDefault();
+      const title = trigger.getAttribute('data-title') || '';
+      const category = trigger.getAttribute('data-category') || '';
+      const desc = trigger.getAttribute('data-desc') || '';
+      let photos = [];
+      try {
+        photos = JSON.parse(trigger.getAttribute('data-photos') || '[]');
+      } catch (err) {
+        photos = [];
       }
+      openCoupleModal(title, category, desc, photos);
+    }
+  });
+
+  // Modal close handlers
+  if (cgmClose) cgmClose.addEventListener('click', closeCoupleModal);
+  if (cgmCloseBtn) cgmCloseBtn.addEventListener('click', closeCoupleModal);
+  if (cgmBackdrop) cgmBackdrop.addEventListener('click', closeCoupleModal);
+
+  // Lightbox close handlers & navigation
+  if (fsClose) fsClose.addEventListener('click', closeFsLightbox);
+  if (fsLightbox) {
+    fsLightbox.addEventListener('click', (e) => {
+      if (e.target === fsLightbox) closeFsLightbox();
     });
   }
+  if (fsPrev) {
+    fsPrev.addEventListener('click', (e) => {
+      e.stopPropagation();
+      openFsLightbox(currentPhotoIdx - 1);
+    });
+  }
+  if (fsNext) {
+    fsNext.addEventListener('click', (e) => {
+      e.stopPropagation();
+      openFsLightbox(currentPhotoIdx + 1);
+    });
+  }
+
+  // Keyboard navigation (Escape, Left, Right)
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      if (fsLightbox && fsLightbox.classList.contains('active')) {
+        closeFsLightbox();
+      } else if (coupleModal && coupleModal.classList.contains('active')) {
+        closeCoupleModal();
+      }
+    } else if (fsLightbox && fsLightbox.classList.contains('active')) {
+      if (e.key === 'ArrowLeft') {
+        openFsLightbox(currentPhotoIdx - 1);
+      } else if (e.key === 'ArrowRight') {
+        openFsLightbox(currentPhotoIdx + 1);
+      }
+    }
+  });
 
   // 9. Ethos Video Reel Modal Handler
   const reelModal = document.getElementById('weg-reel-modal');
