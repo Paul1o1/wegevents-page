@@ -14,6 +14,14 @@ jobs:
     - name: 🚚 Get latest code
       uses: actions/checkout@v4
 
+    - name: 🐍 Set up Python Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install Pillow
+
+    - name: 🖼️ Optimize images & generate WebP variants
+      run: python scripts/optimize_images.py
+
     - name: 🛠️ Compile website with latest CMS content
       run: python scripts/build.py
     
