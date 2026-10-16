@@ -67,6 +67,83 @@ content:
         type: string
 
   # ----------------------------------------------------------
+  # BLOG POSTS COLLECTION (Newest posts appear first automatically)
+  # ----------------------------------------------------------
+  - name: blog
+    label: "📰 Blog Posts"
+    type: collection
+    path: content/blog
+    format: json
+    filename: "{fields.slug}"
+    view:
+      primary: title
+      fields: [title, category, date]
+    fields:
+      - name: title
+        label: "Post Title"
+        type: string
+        required: true
+
+      - name: slug
+        label: "URL Slug (e.g. creating-a-smooth-wedding-timeline)"
+        type: string
+        required: true
+        description: "Appears in URL: /blog/your-slug"
+
+      - name: date
+        label: "Publication Date (e.g. 2025-10-16)"
+        type: date
+        required: true
+
+      - name: category
+        label: "Category (e.g. Planning Guide, Venues & Spaces, Design & Styling)"
+        type: string
+
+      - name: image
+        label: "Featured / Hero Image"
+        type: image
+
+      - name: summary
+        label: "Card Summary (Short excerpt shown in the main blog grid)"
+        type: text
+
+      - name: lead_paragraph
+        label: "Introductory Lead Paragraph (Large text at top of article)"
+        type: text
+
+      - name: content
+        label: "Article Body Content (Full story, details, headings)"
+        type: rich-text
+
+  # ----------------------------------------------------------
+  # BLOG MAIN PAGE SETTINGS
+  # ----------------------------------------------------------
+  - name: blog_page
+    label: "📖 Blog Main Page"
+    path: data/blog_page.json
+    format: json
+    type: file
+    fields:
+      - name: blog_seo_title
+        label: "SEO — Page Title"
+        type: string
+      - name: blog_seo_description
+        label: "SEO — Meta Description"
+        type: text
+      - name: blog_hero_eyebrow
+        label: "Hero — Eyebrow Subtitle (e.g. Journal & Insights)"
+        type: string
+      - name: blog_hero_headline
+        label: "Hero — Headline (e.g. Wedding Journal)"
+        type: string
+      - name: blog_hero_subheadline
+        label: "Hero — Sub-headline"
+        type: string
+      - name: blog_hero_bg
+        label: "Hero — Background Image"
+        type: image
+
+  # ----------------------------------------------------------
   # 1. HOME PAGE  (index.html)
   # ----------------------------------------------------------
   - name: home

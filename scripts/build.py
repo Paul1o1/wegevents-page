@@ -118,6 +118,41 @@ def build_team(members):
         </div>''')
     return "\n".join(cards)
 
+def build_blog_cards(posts):
+    html_cards = []
+    for p in posts:
+        slug = p.get("slug", "")
+        title = p.get("title", "")
+        cat = p.get("category", "Journal")
+        img = p.get("image", "/images/welcome-sign.jpg")
+        summary = p.get("summary", "")
+        
+        html_cards.append(f'''        <!-- Blog Post: {title} -->
+        <div class="service-card" data-framer-name="Post" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+          <a href="/blog/{slug}" style="display: block; overflow: hidden;">
+            <img src="{img}" alt="{title}" style="width: 100%; height: 240px; object-fit: cover; transition: transform 0.4s ease;">
+          </a>
+          <div style="padding: 2rem; display: flex; flex-direction: column; flex-grow: 1;">
+            <p class="sub-heading">{cat}</p>
+            <h3 class="heading-sm" style="margin-bottom: 0.75rem;"><a href="/blog/{slug}" style="color: inherit; text-decoration: none;">{title}</a></h3>
+            <p class="text-muted" style="font-size: 0.95rem; margin-bottom: 1.25rem; flex-grow: 1;">{summary}</p>
+            <div>
+              <a href="/blog/{slug}" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.75rem;">Read Article &rarr;</a>
+            </div>
+          </div>
+        </div>''')
+    return "\n\n".join(html_cards)
+
+def format_post_date(date_str):
+    if not date_str:
+        return ""
+    try:
+        from datetime import datetime
+        dt = datetime.strptime(str(date_str).strip()[:10], "%Y-%m-%d")
+        return dt.strftime("%B %d, %Y")
+    except Exception:
+        return str(date_str)
+
 mappings = [
     ('templates/index.html', 'data/home.json', 'index.html'),
     ('templates/about.html', 'data/about.json', 'about.html'),
@@ -180,5 +215,87 @@ for tmpl_path, json_path, out_path in mappings:
     with open(out_path, 'w', encoding='utf-8') as f:
         f.write(html)
     print(f"Compiled {out_path}")
+
+# ============================================================
+# BLOG COMPILATION (Posts Collection + Main Listing)
+# ============================================================
+import glob
+
+blog_posts = []
+blog_files = glob.glob('content/blog/*.json')
+for fpath in blog_files:
+    try:
+        with open(fpath, 'r', encoding='utf-8') as f:
+            post_data = json.load(f)
+            if not post_data.get('slug'):
+                post_data['slug'] = os.path.splitext(os.path.basename(fpath))[0]
+            blog_posts.append(post_data)
+    except Exception as e:
+        print(f"⚠️ Error reading blog post {fpath}: {e}")
+
+# Sort newest first by date (YYYY-MM-DD)
+blog_posts.sort(key=lambda p: str(p.get('date', '')), reverse=True)
+
+# 1. Compile Main Blog Page (blog.html and blog/index.html)
+if os.path.exists('templates/blog.html'):
+    with open('templates/blog.html', 'r', encoding='utf-8') as f:
+        blog_html = f.read()
+
+    blog_page_data = {}
+    if os.path.exists('data/blog_page.json'):
+        with open('data/blog_page.json', 'r', encoding='utf-8') as f:
+            blog_page_data = json.load(f)
+
+    blog_merged = dict(settings)
+    blog_merged.update(blog_page_data)
+
+    # Inject dynamic blog cards
+    blog_cards_html = build_blog_cards(blog_posts)
+    blog_html = blog_html.replace('{{ blog_cards_html }}', blog_cards_html)
+
+    # Scalar tag replacements
+    for key, val in blog_merged.items():
+        if isinstance(val, (str, int, float)):
+            tag = '{{ ' + key + ' }}'
+            blog_html = blog_html.replace(tag, str(val))
+
+    with open('blog.html', 'w', encoding='utf-8') as f:
+        f.write(blog_html)
+    os.makedirs('blog', exist_ok=True)
+    with open('blog/index.html', 'w', encoding='utf-8') as f:
+        f.write(blog_html)
+    print(f"Compiled blog.html and blog/index.html with {len(blog_posts)} articles")
+
+# 2. Compile Individual Blog Post Pages (blog/<slug>.html)
+if os.path.exists('templates/blog-post.html'):
+    with open('templates/blog-post.html', 'r', encoding='utf-8') as f:
+        post_template = f.read()
+
+    for post in blog_posts:
+        slug = post.get('slug', '').strip()
+        if not slug:
+            continue
+
+        post_data = dict(settings)
+        post_data.update(post)
+        post_data['formatted_date'] = format_post_date(post.get('date', ''))
+
+        # Prepare content paragraphs if raw string
+        body_content = post.get('content', '')
+        if body_content and not ('<' in body_content and '>' in body_content):
+            # Wrap plain text lines in paragraphs
+            paragraphs = [p.strip() for p in body_content.split('\n\n') if p.strip()]
+            post_data['content'] = ''.join([f'<p style="margin-bottom: 1.5rem;">{p}</p>' for p in paragraphs])
+
+        out_html = post_template
+        for key, val in post_data.items():
+            if isinstance(val, (str, int, float)):
+                tag = '{{ ' + key + ' }}'
+                out_html = out_html.replace(tag, str(val))
+
+        post_out_path = f"blog/{slug}.html"
+        with open(post_out_path, 'w', encoding='utf-8') as f:
+            f.write(out_html)
+        print(f"Compiled article {post_out_path}")
 
 print("All pages compiled successfully!")
