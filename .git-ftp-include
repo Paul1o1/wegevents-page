@@ -1,0 +1,6 @@
+# Force git-ftp to always upload newly compiled HTML files and generated WebP images
+# even when Pages CMS only commits a .json file
+!*.html
+!blog/*.html
+!blog/index.html
+!images/*.webp

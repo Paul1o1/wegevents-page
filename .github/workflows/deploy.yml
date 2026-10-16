@@ -10,6 +10,8 @@ jobs:
   web-deploy:
     name: FTP Deploy
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
     - name: 🚚 Get latest code
       uses: actions/checkout@v4
@@ -24,6 +26,13 @@ jobs:
 
     - name: 🛠️ Compile website with latest CMS content
       run: python scripts/build.py
+
+    - name: 💾 Commit compiled website back to repo
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        git add -A
+        git diff --staged --quiet || (git commit -m "Auto-compile website from CMS updates [skip ci]" && git push origin main)
     
     - name: 📂 Sync files to cPanel
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
