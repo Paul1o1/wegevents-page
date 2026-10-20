@@ -2652,6 +2652,39 @@ textarea.form-control {
 }
 
 /* ==========================================================================
+   SECTION DIVIDER: SERVICES → TESTIMONIALS
+   ========================================================================== */
+.section-divider-transition {
+  background: linear-gradient(to bottom, #ECE6DE 0%, #1e1a17 100%);
+  padding: 3.5rem 0 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-divider-inner {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  width: min(480px, 80%);
+}
+
+.section-divider-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--weg-gold, #c9a96e), transparent);
+  opacity: 0.7;
+}
+
+.section-divider-ornament {
+  width: 64px;
+  height: 24px;
+  color: var(--weg-gold, #c9a96e);
+  flex-shrink: 0;
+  filter: drop-shadow(0 0 4px rgba(201, 169, 110, 0.4));
+}
+
+/* ==========================================================================
    SECTION 5B: TESTIMONIAL HERO CAROUSEL
    ========================================================================== */
 .testimonial-hero-section {
